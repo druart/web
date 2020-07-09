@@ -1,138 +1,293 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>druArt</title>
-	<!-- favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="227x227" href="ffavicon/avicon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-	<link rel="manifest" href="favicon/site.webmanifest">
-	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#fff">
-	<!-- style -->
-    <link href="fontawesome-free-5.4.2-web/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css">
-	<!-- typography -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:500,900|Ubuntu" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>druArt</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="227x227" href="ffavicon/avicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#fff">
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <!-- back to top button -->
-	<button class="back-top-btn"><span></span></button>
-<!-- section hero nav -->
-	<section class="section  section--hero">
-		<div class="hero  hero--grid">
-			<div class="item  item--header">
-				<h1 class="hero__main-title">druArt</h1>
-				<h1 class="hero__main-title  is-hidden">dru</h1>
-				<h1 class="hero__main-title  is-hidden">Art</h1>
-				<h2 class="hero__main-subtitle">diego<i class="fas fa-paint-brush"></i>ruiz</h2>
-				<span class="hero__about">biologist</span>
-				<span class="hero__about">d&d</span>
-			</div>
-			<nav class="item  item--body">
-				<ul class="nh-list">
-					<li class="nh-list__item"><a href="#home">home</a></li>
-					<li class="nh-list__item"><a href="#about">about</a></li>
-					<li class="nh-list__item"><a href="#projects">projects</a></li>
-					<li class="nh-list__item"><a href="#research">research</a></li>
-				</ul>
-			</nav>
-		</div>
-	</section>
-<!-- section home -->
-	<div class="global-flex  global-flex--color">
-		<section class="section  section--home  gf__item  gf__item--half" id="home">
-			<div class="s__body">
-				<h1 class="sb__title">home</h1>
-				<p class="sb__text">I'm tring to see things in abstract way, and show my interpretation as illustrations.</p>
-				<div class="global-flex">
-					<div class="gf__item">
-						<a href="#" target:"_blank" class="card">
-							<div class="card__img" style="background-image: url('https://cdn.dribbble.com/users/2149663/screenshots/4312423/murcielago.gif');"></div>
-							<div class="card__content">
-								<h2 class="card__title">Just Flying!</h2>
-								<p class="card__description">GIF</p>
-							</div>
-						</a>
-					</div>
-					<div class="gf__item">
-						<a href="#" class="card">
-							<div class="card__img" style="background-image: url('https://cdn.dribbble.com/users/2149663/screenshots/4289466/pinky-vader.png');"></div>
-							<div class="card__content">
-								<h2 class="card__title">Pinky Vader</h2>
-								<p class="card__description">ILLUSTRATION</p>
-							</div>
-						</a>
-					</div>
-					<div class="gf__item">
-						<a href="#" class="card">
-							<div class="card__img" style="background-image: url('https://cdn.dribbble.com/users/2149663/screenshots/4274227/cool_gorila.png');"></div>
-							<div class="card__content">
-								<h2 class="card__title">Cool Gorilla</h2>
-								<p class="card__description">ILLUSTRATION</p>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
+    <button class="back-top-btn"><span></span></button>
+<!-- section hero -->
+    <section class="section  section--hero">
+        <div class="header">
+            <div class="header__logo">
+                <h1 class="text-logo">dru</h1>
+                <h1 class="text-logo">art</h1>
+            </div>
+        </div>
+        <div class="hero  [ grid  grid--tow-rows ]">
+            <div class="item  item--header">
+                <!-- <h2 class="hero__main-title">Diego<i class="fas fa-code"></i>Ruiz</h2> -->
+                <h2 class="hero__main-title  [ text-align-right ]">Diego</h2>
+                <div class="code-icon">
+                    <span class="left"></span>
+                    <span class="center"></span>
+                    <span class="right"></span>
+                </div>
+                <h2 class="hero__main-title  [ text-align-left ]">Ruiz</h2>
+                <!-- <h2 class="hero__main-title">diego<i class="fas fa-paint-brush"></i>ruiz</h2> -->
+            </div>
+            <nav class="item  item--body">
+                <ul class="nh-list">
+                    <li class="nh-list__item"><a href="#portfolio">portfolio</a></li>
+                    <li class="nh-list__item"><a href="#about">about</a></li>
+                    <li class="nh-list__item"><a href="#resume">resume</a></li>
+                    <li class="nh-list__item"><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+<!-- section parallax -->
+    <section class="section-parallax  section-parallax--first">
+        <blockquote class="section-parallax__quote-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo non doloremque quidem, tempore. Illo, accusamus.</blockquote>
+    </section>
+<!-- section portfolio -->
+    <section class="section" id="portfolio">
+        <div class="section__body">
+            <h2 class="section__title  section__title--center  [ section__element--hidden ]">I'm a marine biologist<br>& a dedicated web developer.</h2>
+            <div class="global-flex">
+                <p class="section__text  section__text--center  [ section__element--hidden ]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi quis quo, magni quia laboriosam, necessitatibus in dolorum excepturi ipsam fuga veritatis consequuntur asperiores, minus delectus facilis modi? Officiis nihil doloribus blanditiis autem nobis.</p>
+            </div>
+            <div class="card-list  [ section__element--hidden ]">
+                <div class="card-list__item">
+                    <a href="#" target=_blank" class="card">
+                        <div class="card__img" style="background-image: url('');"></div>
+                        <div class="card__content">
+                            <h2 class="card__title">Lorem, ipsum.</h2>
+                            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ab!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-list__item">
+                    <a href="https://codepen.io/druArt" target="_blank" class="card">
+                        <div class="card__img" style="background-image: url('');"></div>
+                        <div class="card__content">
+                            <h2 class="card__title">CodePen.</h2>
+                            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ab!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-list__item  card-list__item--full">
+                    <a href="#" class="card">
+                        <div class="card__img" style="background-image: url('');"></div>
+                        <div class="card__content">
+                            <h2 class="card__title">Lorem, ipsum.</h2>
+                            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ab!</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 <!-- section about -->
-		<section class="section  section--about  gf__item  gf__item--half" id="about">
-			<div class="s__body">
-				<div class="hero-wrap">
-					<div class="moon"></div>
-					<div class="main-wrap">
-						<div class="buho">
-							<div class="buho__body"></div>
-							<div class="buho__wing--left"></div>
-							<div class="buho__wing--right"></div>
-							<div class="buho__tail"></div>
-							<div class="buho__head">
-								<div class="buho__horn  buho__horn--left"></div>
-								<div class="buho__horn  buho__horn--right"></div>
-								<div class="buho__eye  buho__eye--left"></div>
-								<div class="buho__eye  buho__eye--right"></div>
-								<div class="buho__mouth"></div>
-								<div class="buho__mouth-top"></div>
-							</div>
-							<div class="buho__foot  buho__foot--left"></div>
-							<div class="buho__foot  buho__foot--right"></div>
-							<div class="buho__branch">
-								<div class="leaf"></div>
-								<div class="leaf  leaf--small"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<h1 class="sb__title">about</h1>
-				<p class="sb__text">As marine biologist, with a multidisiplinary background. I'm interested in interactions, impacts and solutions.</p>
-			</div>
-		</section>
-<!-- section projects -->
-		<section class="section  section--projects  gf__item  gf__item--half" id="projects">
-			<div class="s__body">
-				<h1 class="sb__title">projects</h1>
-				<p class="sb__text">link science and multimedia to promote knowledge to global scale.</p>
-			</div>
-		</section>
-<!-- section research -->
-		<section class="section  section--research  gf__item  gf__item--half" id="research">
-			<div class="s__body">
-				<h1 class="sb__title">research</h1>
-				<p class="sb__text">still thinking! anyway, making sciences it never stop.</p>
-			</div>
-		</section>
-	</div>	
-	<section class="section  section--footer" id="footer">
-		<span>copyright &copy; <a class="section--footer__link" href="https://codepen.io/druArt" target="_blank">druart 2018</a></span>
-	</section>
+    <section class="section" id="about">
+        <div class="section__body">
+            <h2 class="section__title  [ section__element--hidden ]">What I've done<br>& what I can do.</h1>
+            <div class="global-flex">
+                <p class="section__text  [ section__element--hidden ]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus rem laboriosam rerum magni natus obcaecati sunt quasi molestiae, impedit porro repellat? Animi tenetur doloribus similique velit neque pariatur ipsum corporis, repudiandae id voluptatum unde aperiam consectetur fugiat laboriosam dolorem voluptate accusantium hic nesciunt, aliquam quasi dolorum. Laboriosam minus sint veniam, corrupti qui ea, nulla vel unde cumque laudantium accusantium!</p>
+            </div>
+        </div>
+    </section>
+<!-- section buho-pure-css -->
+    <section class="section">
+        <div class="hero-wrap">
+            <div class="moon">
+                <div class="spots">
+                    <span class="spot spot--one"></span>
+                    <span class="spot spot--two"></span>
+                    <span class="spot spot--three"></span>
+                    <span class="spot spot--four"></span>
+                    <span class="spot spot--five"></span>
+                    <span class="spot spot--six"></span>
+                    <span class="spot spot--seven"></span>
+                    <span class="spot spot--eigth"></span>
+                </div>
+            </div>
+            <div class="main-wrap">
+                <div class="buho">
+                    <div class="buho__body"></div>
+                    <div class="buho__wing--left"></div>
+                    <div class="buho__wing--right"></div>
+                    <div class="buho__tail"></div>
+                    <div class="buho__head">
+                        <div class="buho__horn  buho__horn--left"></div>
+                        <div class="buho__horn  buho__horn--right"></div>
+                        <div class="buho__eye  buho__eye--left"></div>
+                        <div class="buho__eye  buho__eye--right"></div>
+                        <div class="buho__mouth"></div>
+                        <div class="buho__mouth--top"></div>
+                    </div>
+                    <div class="buho__foot  buho__foot--left"></div>
+                    <div class="buho__foot  buho__foot--right"></div>
+                    
+                        <div class="leaf"></div>
+                        <div class="leaf  leaf--small"></div>
+                    </div>
+                    <div class="tree__branch"></div>
+                </div>
+                <span class="pure-css">pure CSS</span>
+            </div>
+        </div>
+    </section>
+<!-- section resume -->
+    <section class="section" id="resume">
+        <div class="section__body">
+            <h2 class="section__title">Dig a little<br>deeper.</h2>
+            <div class="global-flex  [ margin--top-medium ]  [ section__element--hidden ]">
+                <h3 class="list__title  global-flex__item">Technologie</h3>
+                <div class="global-flex__item">
+                    <ul class="list">
+                        <h4 class="list__subtitle  list__subtitle--inside">Day-to-day comfort</h4>
+                        <li class="list__item">Sass / SCSS</li>
+                        <li class="list__item">HTML5 / CSS3</li>
+                        <li class="list__item">PHP / SQL</li>
+                        <li class="list__item">JavaScript / jQuery</li>
+                        <li class="list__item">Illustator / Photoshop</li>
+                        <li class="list__item">Version Contol (GIT)</li>
+                        <li class="list__item">Bootstrap</li>
+                        <li class="list__item">Agile Methodology</li>
+                        <li class="list__item">Cross-Browser Compativility</li>
+                        <li class="list__item">Mobile Frist Thinking</li>
+                    </ul>
+                </div>
+                <div class="global-flex__item">
+                    <ul class="list">
+                        <h4 class="list__subtitle  list__subtitle--inside">Experience with</h4>
+                        <li class="list__item">Grunt</li>
+                        <li class="list__item">Composer</li>
+                        <li class="list__item">Docker</li>
+                        <li class="list__item">ddev</li>
+                        <li class="list__item">XAMPP / MAMP</li>
+                        <li class="list__item">TYPO3 / Extbase-Fluid</li>
+                        <li class="list__item">Chart.js</li>
+                        <li class="list__item">Node.js(limited)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="global-flex  [ section__element--hidden ]">
+                <h3 class="list__title  global-flex__item">Work Experience</h3>
+                <div class="global-flex__item">
+                    <ul class="list">
+                        <li  class="list__item  list__item--with-text">
+                            <h4 class="list__subtitle">Freelance</h4>
+                            <p class="list__text  list__text--bold">Bremen, 2015 - present</p>
+                            <p class="list__text"></p>
+                        </li>
+                        <li  class="list__item  list__item--with-text">
+                            <h4 class="list__subtitle">Back-end Developer</h4>
+                            <p class="list__text  list__text--bold">neusta software development, Project,  Bremen, 2020</p>
+                            <p class="list__text">TYPO3 back-end module, concept and development. Primary code utilization includes HTML5, CSS3, SCSS, PHP, Javascript, Extbase/Fluid-Templating and Git.</p>
+                        </li>
+                        <li  class="list__item  list__item--with-text">
+                            <h4 class="list__subtitle">Front-end Developer</h4>
+                            <p class="list__text  list__text--bold">neusta software development, Intership,  Bremen, 2019</p>
+                            <p class="list__text"></p>
+                        </li>
+                        <li  class="list__item  list__item--with-text">
+                            <h4 class="list__subtitle">Front-end Developer</h4>
+                            <p class="list__text  list__text--bold">neusta software development, Intership,  Bremen, 2017</p>
+                            <p class="list__text">Application of basic principles for responsible design. Use of layout techniques and rasterization (Flexbox and Grid), Development of interactive graphics (SVG, jQuery, and SCSS-animation). Modular development using Atomic Design principles (Patternlab, Templating, JSON). Automation of development tasks (JS taskrunner - Grunt)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="global-flex  [ section__element--hidden ]">
+                <h3 class="list__title  global-flex__item">Certification</h3>
+                <div class="global-flex__item">
+                    <ul class="list">
+                        <li class="list__item  list__item--with-text">
+                            <h4 class="list__subtitle">Oracle Certified Associate</h4>
+                            <p class="list__text">Java SE 8 Programmer</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="global-flex  [ section__element--hidden ]">
+                <h3 class="list__title  global-flex__item">Education</h3>
+                <div class="global-flex__item">
+                    <ul class="list">
+                        <li class="list__item  list__item--with-text">
+                            <h4 class="list__subtitle">Software Developer</h4>
+                            <p class="list__text">HEC-IT-Bildungshaus, Bremen, 2018 - 2020</p>
+                        </li>
+                        <li class="list__item  list__item--with-text">
+                            <h4 class="list__subtitle">PHD in Marine Biology</h4>
+                            <p class="list__text">Bremen University, Bremen, 2012 - 2015</p>
+                        </li>
+                        <li class="list__item  list__item--with-text">
+                            <h4 class="list__subtitle">Biology</h4>
+                            <p class="list__text">Azuay University, Ecuador, 1995 - 2003</p>
+                        </li>
+                        <li class="list__item  list__item--with-text">
+                            <h4 class="list__subtitle">Visual Arts</h4>
+                            <p class="list__text">Cuenca University, Ecuador, 1992 - 1995</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- section contact -->
+    <section class="section" id="contact">
+        <div class="section__body">
+            <h2 class="section__title  [ section__element--hidden ]">Connect with me<br>today.</h2>
+            <div class="card-list  [ section__element--hidden ]">
+                <div class="card-list__item">
+                    <a href="mailto:druart.adm@gmail.com" class="card">
+                        <div class="card__content">
+                            <h2 class="card__title">Say Hello</h2>
+                            <p class="card__description">Feel free to contact me if you have any question or comments.</p>
+                            <p class="card__description">To get in touch, write to druart.adm@gmail.com.</p> 
+                        </div>
+                    </a>
+                </div>
+                <div class="card-list__item">
+                    <a href="https://www.google.com/maps/place/Peterswerder,+28205+Bremen/@53.06592,8.8349236,15z/data=!3m1!4b1!4m13!1m7!3m6!1s0x47b128100ceee335:0xc2e8885cf937df51!2sBremen!3b1!8m2!3d53.0792962!4d8.8016936!3m4!1s0x47b127f6e977fb1b:0x9378c94e8e1cd756!8m2!3d53.0660278!4d8.8442516" target="_blank" class="card">
+                        <div class="card__content">
+                            <h2 class="card__title">Location</h2>
+                            <p class="card__description">Bremen, Germany</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- section footer -->
+    <section class="section  section--footer" id="footer">
+        <div class="section__body">
+            <h2 class="section__title  section__title--white  section__title--center">Let me be part of your ideas.</h2>
+            <div class="[ grid  grid--one-rows  grid--margin ]">
+                <nav class="item  item--body"></nav>
+                    <ul class="nh-list">
+                        <li class="nh-list__item"><a href="#portfolio">portfolio</a></li>
+                        <li class="nh-list__item"><a href="#about">about</a></li>
+                        <li class="nh-list__item"><a href="#resume">resume</a></li>
+                        <li class="nh-list__item"><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <span>copyright &copy; druart 2020</span>
+        </div>
+    </section>
 <!-- scripts -->
-	<script src='js/jquery-3.3.1.min.js'></script>
-	<script  src="js/main.min.js"></script>
+    <script src='js/jquery-3.3.1.min.js'></script>
+    <script  src="js/main.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,77 @@
+/**
+ *back to top button
+ */
+.back-top-btn {
+    position: fixed;
+    right: $back-to-top-position-right;
+    bottom: $back-to-top-position-bottom-hidden;
+    width: $back-to-top-size;
+    height: $back-to-top-size;
+    background-color:  $back-to-top-background-color;
+    border: $back-to-top-border;
+    border-radius: 50%;
+    box-shadow: $back-to-top-shadow;
+    transition: all 1.2s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    outline: none;
+    cursor: pointer;
+    z-index: 999;
+
+    @media screen and (min-width: 680px) {
+        right: 5vw;
+    }
+
+    & span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0.2em;
+        height: 1.3em;
+        background-color: transparent;
+    }
+
+    & span::before,
+    & span::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: $back-to-top-arrow-width;
+        height: $back-to-top-arrow-height;
+        background-color: $back-to-top-arrow-backgroud-color;
+        border-radius: $back-to-top-border-radius;
+        transition: transform 0.6s ease-in-out;
+    }
+
+    & span::before {
+        left: calc(50% + (3.4em / 11));
+        transform: rotate(-45deg);
+    }
+
+    & span::after {
+        right: calc(50% + (3.4em / 11));
+        transform: rotate(45deg);
+    }
+
+    &.is-actived {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &.is-actived span::before {
+        left: calc(50% + (3.4em / 11));
+        transform: rotate(405deg);
+    }
+
+    &.is-actived span::after {
+        right: calc(50% + (3.4em / 11));
+        transform: rotate(-405deg);
+    }
+
+    &.is-show {
+        display: block;
+        bottom: $back-to-top-position-bottom-shown;
+        visibility: visible;
+        opacity: 0.8;
+    }
+}

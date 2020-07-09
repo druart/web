@@ -1,21 +1,32 @@
 /*------------------------------------*\
-	$Basis
+	$variables
 \*------------------------------------*/
-@import "scss/animate-style";
-@import "scss/custom-style";
+@import "scss/variables";
+/*------------------------------------*\
+	$basis
+\*------------------------------------*/
+@import "scss/normalize";
+@import "scss/utilities";
+@import "scss/grid";
+@import "scss/flex";
+@import "scss/animate";
 /*------------------------------------*\
 	$html structura
 \*------------------------------------*/
-@import "scss/section-style";
-@import "scss/hero-style";
+@import "scss/header";
+@import "scss/section";
+@import "scss/parallax";
+@import "scss/hero";
+@import "scss/code-icon";
 /*------------------------------------*\
-	$Elements
+	$elements
 \*------------------------------------*/
-@import "scss/btn-style";
-@import "scss/nav-style";
-@import "scss/card-style";
+@import "scss/button";
+@import "scss/nav";
+@import "scss/list";
+@import "scss/card";
 
 /*------------------------------------*\
-	$Pure css animate
+	$pure css animate
 \*------------------------------------*/
 @import "scss/pure-css-buho";

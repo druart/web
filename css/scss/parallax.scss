@@ -1,0 +1,55 @@
+/**
+ *paralax
+ */
+ .section-parallax {
+    display: block;
+    position: relative;
+    height: $section-parallax-height;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 130%;
+        height: 100%;
+        background-color: $section-parallax-before-backgrond-color;
+        box-shadow: $section-parallax-box-shadow;
+        z-index: -1;
+    }
+
+    &--first {
+        background-image: $section-parallax-background-image;
+    }
+
+    &__quote-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        margin-left: $section-parallax-quote-margin-left;
+        padding: $section-parallax-quote-padding;
+        color: $section-parallax-quote-text-font-color;
+        font-size: $section-parallax-quote-text-font-size;
+        font-weight: $section-parallax-quote-font-weight;
+        line-height: $section-parallax-quote-line-height;
+        letter-spacing: $section-parallax-quote-letter-spacing;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: $section-parallax-quote-padding;
+            left: 0;
+            width: $section-parallax-quote-before-width;
+            height: calc(100% - #{$section-parallax-quote-padding}  * 2);
+            background-color: $section-parallax-quote-before-backgrond-color;
+            z-index: -1;
+        }
+    }
+}

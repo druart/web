@@ -1,0 +1,96 @@
+/**
+ *hero
+ */
+.hero {
+    margin:  $hero-margin-tiny;
+    padding: $hero-padding;
+
+    /**
+    *hero breakpoints
+    */
+    @media screen and (min-width: 320px) and (max-width: 679px) {
+        margin: $hero-margin-small;
+    }
+
+    @media screen and (min-width: 680px) and (max-width: 1027px) {
+        margin: $hero-margin-medium;
+    }
+
+    @media screen and (min-width: 1028px) {
+        margin: $hero-margin-large;
+    }
+
+
+    & .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--header,
+        &--body {
+           height: auto;
+        }
+
+        &--body {
+            padding: $hero-item-body-padding-small;
+
+            @media screen and (min-width: 721px) {
+                padding: $hero-item-body-padding-medium;
+            }
+        }
+    }
+
+/**
+ *text
+ */
+    &__main-title {
+        display: block;
+        width: 100%;
+        margin: 0;
+        font-size: $hero-main-title-font-small;
+        font-family: $hero-main-title-font-family;
+        font-weight: normal;
+        color: $hero-main-title-color;
+        text-shadow: $hero-main-title-text-shadow;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transition: font 0.6s ease;
+        letter-spacing: $hero-main-title-letter-spacing-small;
+        animation: fadeInUp 0.8s ease;
+
+        &:first-child {
+            margin-left: $hero-main-title-letter-spacing-small;
+        }
+
+    /**
+    *hero main title breakpoint
+    */
+        @media screen and (min-width: 680px) and (max-width: 899px) {
+            font-size: $hero-main-title-font-medium;
+            letter-spacing: $hero-main-title-letter-spacing-medium;
+
+            &:first-child {
+                margin-left: $hero-main-title-letter-spacing-medium;
+            }
+        }
+
+        @media screen and (min-width: 900px) {
+            font-size: $hero-main-title-font-large;
+            letter-spacing: $hero-main-title-letter-spacing-large;
+
+            &:first-child {
+                margin-left: $hero-main-title-letter-spacing-large;
+            }
+        }
+    }
+
+    &__about {
+        font-size: 1.1em;
+        font-family: $hero-about-font-family;
+        color: $hero-about-color;
+        align-self: flex-end;
+        letter-spacing: $hero-about-letter-spacing;
+        animation: bounceInLeft 1.2s ease;
+    }
+}

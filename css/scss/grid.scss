@@ -1,0 +1,24 @@
+/**
+ *grid
+ */
+.grid {
+    display: grid;
+
+    &--margin {
+        margin: $grid-margin-small;
+
+        @media screen and (min-width: 680px) {
+            margin: $grid-margin-large;
+        }
+    }
+    
+    &--one-rows {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+    }
+    
+    &--tow-rows {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr minmax(1fr, 100%);
+    }
+}

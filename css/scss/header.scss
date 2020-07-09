@@ -1,0 +1,35 @@
+/**
+ *header
+ */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: $basis-spacing;
+
+    &__logo {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        padding-left: $double-spacing;
+
+        & .text-logo {
+            display: block;
+            margin: $header-text-logo-margin;
+            padding: $header-text-logo-padding;
+            background-image: $header-text-logo-backgound-color;
+            font-family: $header-text-logo-font-familie;
+            font-size: $header-text-logo-font-size;
+            font-weight: $header-text-logo-weight;
+            color: $header-text-logo-weight-color;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-shadow: $header-text-logo-text-shadow;
+            text-transform: uppercase;
+            animation: fadeInUp 0.8s ease;
+            transition: all 0.6s ease;
+        }
+    }
+}

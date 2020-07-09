@@ -1,28 +1,28 @@
 [user]
-	name = druart
-	email = diegoruizj.74@gmail.com
+    name = druart
+    email = diegoruizj.74@gmail.com
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 
 [core]
-	filemode = false
-	autocrlf = input
+    filemode = false
+    autocrlf = input
 
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 
 [color]
-	ui = auto
+    ui = auto
 
 [color "diff"]
-	whitespace = red reverse
+    whitespace = red reverse
 
 [credential]
-	helper = cache --timeout=3600
-	
+    helper = cache --timeout=3600
+    
 [credential "*.gmail.com"]
-	username = diegoruizj.74
+    username = diegoruizj.74

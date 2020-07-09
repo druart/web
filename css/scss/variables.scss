@@ -1,0 +1,166 @@
+/**
+ *variables
+ */
+
+/*spacing*/
+$basis-spacing: 12px;
+$half-spacing: $basis-spacing / 2;
+$double-spacing: $basis-spacing * 2;
+$triple-spacing: $basis-spacing * 3;
+
+/*fonts*/
+$ff-bebas-neue: 'Bebas Neue', cursive;
+$ff-gentium-basic: 'Gentium Basic', serif;
+$ff-montserrat: "Montserrat";
+
+/*color*/
+$BLEU: #5f9ede;
+$ORANGE: #f3aa23;
+$GRAY: #aaa;
+$WHITE: #fbfbfb;
+$font-basis-color: $GRAY;
+$a-default-color: $ORANGE;
+// border-bottom: 0.01rem solid #00b3ac;
+
+/*body*/
+$body-min-width: 320px;
+
+/*section*/
+$section-hero-padding: $basis-spacing;
+$section-hero-background: linear-gradient(#f1f1f1 96%, $WHITE 96%) !important;
+$section-background-color: $WHITE;
+$section-footer-background-color: #4e4e4e !important;
+$section-font-family: $ff-montserrat, sans-serif;
+$section-body-max-width: 1600px;
+$section-title-font-family: $ff-gentium-basic, sans-serif;
+$section-footer-span-padding: $basis-spacing;
+$section-footer-span-font-size: 16px;
+$section-footer-span-font-weight: 600;
+$section-footer-span-color: $GRAY;
+$section-body-padding: 20vh 6vw;
+$section-title-padding: $basis-spacing;
+$section-title-font-size: 36px;
+$section-title-font-color: $BLEU;
+$section-title-font-white-color: #ccc;
+$section-title-text-shadow: 3px 3px 2px rgba(0,0,0,0.1);
+$section-text-font-size: 22px;
+$section-text-margin: $basis-spacing;
+$section-text-font-color: $GRAY;
+
+/*parallax*/
+$section-parallax-height: 400px;
+$section-parallax-before-backgrond-color: rgba(255,255,255,0.4);
+$section-parallax-background-image: url("../images/tiny_pincels.jpeg");
+$section-parallax-box-shadow: inset 0 0 30px rgba(0,0,0,0.2);
+$section-parallax-quote-margin-left: -8vw;
+$section-parallax-quote-padding: 4vw;
+$section-parallax-quote-text-font-color: $WHITE;
+$section-parallax-quote-font-family: $ff-montserrat;
+$section-parallax-quote-text-font-size: 24px;
+$section-parallax-quote-font-weight: 600;
+$section-parallax-quote-line-height: 1.25;
+$section-parallax-quote-letter-spacing: 2px;
+$section-parallax-quote-before-backgrond-color: $ORANGE;
+$section-parallax-quote-before-width: 8px;
+
+/*grid*/
+$grid-margin-small: 4vh 3vh;
+$grid-margin-large: 10vh 6vh;
+
+/*header*/
+$header-text-logo-margin: 0;
+$header-text-logo-padding: 0;
+$header-text-logo-font-familie: $ff-montserrat, sans-serif;
+$header-text-logo-weight-color: rgba(0, 0, 0, 0.3);
+$header-text-logo-font-size: 24px;
+$header-text-logo-weight: 900;
+$header-text-logo-backgound-color: linear-gradient(rgba(137, 223, 230, 0.6) 0%, rgba(95, 158, 222, 0.8) 100%);
+$header-text-logo-text-shadow: 0 2px 4px rgba(255, 255, 255, 0.42);
+
+/*hero*/
+$hero-margin-tiny: 4vh;
+$hero-margin-small: 6vh;
+$hero-margin-medium: 16vh;
+$hero-margin-large: 20vh;
+$hero-padding: 0;
+$hero-item-body-padding-small: $basis-spacing;
+$hero-item-body-padding-medium: $double-spacing;
+$hero-main-title-font-small: 26px;
+$hero-main-title-font-medium: 32px;
+$hero-main-title-font-large: 48px;
+$hero-main-title-font-family: $ff-bebas-neue, sans-serif;
+$hero-about-font-family: $ff-bebas-neue, sans-serif;
+$hero-main-title-color: rgba(0, 0, 0, 0.3);
+$hero-main-title-text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+$hero-main-title-letter-spacing-small: 12px;
+$hero-main-title-letter-spacing-medium: 18px;
+$hero-main-title-letter-spacing-large: 24px;
+$hero-about-color: rgba(0, 0, 0, 0.2);
+$hero-about-letter-spacing: 0.1em;
+
+/*code icon*/
+$code-icon-width: 48px;
+$code-icon-height: 36px;
+$code-icon-background-color: $ORANGE;
+
+/*nav*/
+$nav-link-font-size: 14px;
+$nav-link-font-weight: 600;
+$nav-link-letter-spacing: 3px;
+$nav-link-color: lighten($GRAY, 10%);
+$nav-link-color-hover: rgb(137, 223, 230);
+$nav-link-font-family: $ff-montserrat, sans-serif;
+$nav-link-line-height: 1.8em;
+
+/*list*/
+$list-padding: $triple-spacing;
+$list-item-padding: $half-spacing;
+$list-title-padding: 24px;
+$list-title-font-size: 24px;
+$list-title-font-weight: 400;
+$list-global-flex-item-min-width: 300px;
+$list-subtitle-padding: $basis-spacing;
+$list-subtitle-font-size: 14px;
+$list-subtitle-font-weight: 600;
+$list-item-margin: 36px;
+$list-item-font-size: 18px;
+$list-item-with-text-padding: $double-spacing;
+$list-item-with-text-font-size: 16px;
+$list-item-bold-font-weight: 600;
+
+/*button back to top*/
+$back-to-top-position-right: 7vw;
+$back-to-top-position-bottom-hidden: -100%;
+$back-to-top-position-bottom-shown: 5vh;
+$back-to-top-size: 3.8em;
+$back-to-top-background-color: $GRAY;
+$back-to-top-border: 2px solid rgba(255,255,255,0.9);
+$back-to-top-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+$back-to-top-arrow-backgroud-color: rgba(255, 255, 255, 0.9);
+$back-to-top-arrow-width: 0.2em;
+$back-to-top-arrow-height: 1.3em;
+$back-to-top-border-radius: 0.2em;
+
+/*flex*/
+$global-flex-background-color: #27282e;
+$global-flex-max-width: 83%;
+$global-flex-min-width: 180px;
+$global-flex-item-half: $basis-spacing;
+
+/*card*/
+$card-list-padding: $triple-spacing;
+$card-list-item-padding: $basis-spacing;
+$card-background-color: $WHITE;
+$card-background-color-hover: $ORANGE;
+$card-font-family: $ff-montserrat;
+$card-border: 1px solid $ORANGE;
+$card-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+$card-transforme-effect-hover: translate3d(0, -4px, 0);
+$card-shadow-hover: 1px 1px 5px rgba(0,0,0,0.2);
+$card-img-max-width: 30%;
+$card-descrition-padding: $double-spacing;
+$card-title-font-color: darken($ORANGE, 10%);
+$card-title-font-size: 14px;
+$card-title-font-weight: 600;
+$card-descrition-padding: $double-spacing;
+$card-descrition-font-size: 16px;

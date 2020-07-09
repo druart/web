@@ -1,0 +1,95 @@
+/**
+ *code icon
+ */
+.code-icon {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: $code-icon-width;
+    height: $code-icon-height;
+    margin-right: $hero-main-title-letter-spacing-small;
+    margin-top: -1%;
+    animation: fadeInUp 0.8s ease;
+
+    /*code icon breakpoint*/
+    @media screen and (min-width: 680px) and (max-width: 899px) {
+        width: calc(#{$code-icon-width} * 1.2);
+        height: calc(#{$code-icon-height} * 1.2);
+        margin-right: $hero-main-title-letter-spacing-medium;
+    }
+
+    @media screen and (min-width: 900px) {
+        width: calc(#{$code-icon-width} * 1.4);
+        height: calc(#{$code-icon-height} * 1.4);
+        margin-right: $hero-main-title-letter-spacing-large;
+    }
+    
+    & .left {
+        position: absolute;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        background-color: transparent;
+    
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 48%;
+            width: 32%;
+            height: 48%;
+            background-color: $code-icon-background-color;
+            border-radius: 2px;
+        }
+
+        &::before {
+            top: calc(50% - 10%);
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            bottom: calc(50% - 10%);
+            transform: rotate(45deg);
+        }
+    }
+    
+    & .center {
+        position: absolute;
+        left: calc(50% - 5%);
+        width: 11%;
+        height: 100%;
+        background-color: $code-icon-background-color;
+        border-radius: 2px;
+        transform: rotate(15deg);
+    }
+    
+    & .right {
+        position: absolute;
+        right: 0;
+        width: 30%;
+        height: 100%;
+        background-color: transparent;
+    
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            right: 48%;
+            width: 32%;
+            height: 48%;
+            background-color: $code-icon-background-color;
+            border-radius: 2px;
+        }
+
+        &::before {
+            top: calc(50% - 10%);
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            bottom: calc(50% - 10%);
+            transform: rotate(-45deg);
+        }
+    }
+}

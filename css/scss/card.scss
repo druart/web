@@ -1,0 +1,78 @@
+/**
+ *card
+ */
+.card-list {
+    display: flex;
+    padding-top: $card-list-padding;
+    flex-wrap: wrap;
+
+    &__item {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: calc(100% / 3);
+        padding: $card-list-item-padding;
+
+        &--full {
+            flex-grow: 2;
+            flex-shrink: 0;
+            flex-basis: 100%;
+        }
+    }
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: calc(#{$body-min-width} - #{$card-list-item-padding} * 2);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $card-background-color;
+    font-family: $card-font-family;
+    text-decoration: none;
+    border: $card-border;
+    box-shadow: $card-shadow;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: lighten($card-background-color-hover, 10%);
+        box-shadow: $card-shadow-hover;
+        transform: $card-transforme-effect-hover;
+
+        & .card__title,
+        & .card__description {
+            color: darken(#fbfbfb, 60%);
+        }
+    }
+
+    &__img {
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+        max-height: $card-img-max-width;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        padding: $card-descrition-padding;
+        font-size: $card-title-font-size;
+        font-weight: $card-title-font-weight;
+        color: $card-title-font-color;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        padding: $card-descrition-padding;
+        padding-top: 0;
+        font-size: $card-descrition-font-size;
+    }
+}
