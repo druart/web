@@ -14,41 +14,30 @@
         background-color: $global-flex-background-color;
     }
 
-    &.global-flex {
-        justify-content: center;
-        max-width: $global-flex-max-width;
-        margin: 0 auto;
-    }
-
     &__item {
-        display: block;
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: auto;
         padding: 0;
 
-        @media screen and (min-width: 800px) {
-            flex-basis: 100%;
-        }
-
         &--half {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-            height: auto;
-            padding-left: $global-flex-item-half;
 
-            @media screen and (min-width: 1400px) {
-                width: calc(50% - #{$global-flex-item-half} * 4);
-                padding: $global-flex-item-half;
-                background-color: transparent !important;
-                background: transparent !important;
+            @media screen and (min-width: 1040px) {
+                flex-basis: 50% !important;
             }
         }
 
-        @media screen and (min-width: 1400px) {
-            min-width: $global-flex-min-width;
+        &--small {
+            padding-top: $global-flex-small-padding;
+
+            @media screen and (min-width: 1040px) {
+                flex-basis: 33% !important;
+                padding-top: 0;
+            }
+        }
+
+        @media screen and (min-width: 480px) {
+            flex-basis: 100%;
         }
     }
 }

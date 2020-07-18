@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-width: calc(#{$body-min-width} - #{$card-list-item-padding} * 2);
+    min-width: $card-min-width;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -35,15 +35,19 @@
     border: $card-border;
     box-shadow: $card-shadow;
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
 
     &:hover {
         background-color: lighten($card-background-color-hover, 10%);
         box-shadow: $card-shadow-hover;
         transform: $card-transforme-effect-hover;
 
-        & .card__title,
+        & .card__title {
+            color: lighten($card-background-color, 4%);
+        }
+
         & .card__description {
-            color: darken(#fbfbfb, 60%);
+            color: darken($card-background-color, 54%);
         }
     }
 
@@ -51,7 +55,9 @@
         flex-grow: 1;
         flex-shrink: 1;
         width: 100%;
-        max-height: $card-img-max-width;
+        min-height: $card-img-min-height;
+        height: $card-img-height;
+        background-color: $card-img-background-color;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
@@ -74,5 +80,25 @@
         padding: $card-descrition-padding;
         padding-top: 0;
         font-size: $card-descrition-font-size;
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0;
+        height: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        background-color: transparent;
+        transform: translate3d(0, 100%, 0);
+        
+        &--pop-up {
+
+            .card:hover & {
+                height: auto;
+                transform: translate3d(0, 0, 0);
+                transition: transform 0.8s ease; 
+            }
+        }
     }
 }

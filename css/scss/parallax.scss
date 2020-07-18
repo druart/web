@@ -4,12 +4,16 @@
  .section-parallax {
     display: block;
     position: relative;
-    height: $section-parallax-height;
+    height: $section-parallax-height-small;
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+        height: $section-parallax-height;
+    }
     
     &::before {
         position: absolute;
@@ -32,24 +36,42 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: calc(100% - #{$section-parallax-quote-margin-small-left}
+                - #{$section-parallax-quote-padding-small} * 2);
         margin: 0;
-        margin-left: $section-parallax-quote-margin-left;
-        padding: $section-parallax-quote-padding;
-        color: $section-parallax-quote-text-font-color;
-        font-size: $section-parallax-quote-text-font-size;
+        margin-left: $section-parallax-quote-margin-small-left;
+        padding: $section-parallax-quote-padding-small;
+        color: $section-parallax-quote-font-color;
+        text-shadow: $section-parallax-quote-text-shadow;
+        font-family: $section-parallax-quote-font-family;
+        font-size: $section-parallax-quote-font-size-small;
         font-weight: $section-parallax-quote-font-weight;
         line-height: $section-parallax-quote-line-height;
         letter-spacing: $section-parallax-quote-letter-spacing;
 
+        @media screen and (min-width: 768px) {
+            width: calc(100% - #{$section-parallax-quote-margin-left}
+                    - #{$section-parallax-quote-padding} * 2);
+            max-width: $section-parallax-quote-max-width;
+            margin-left: $section-parallax-quote-margin-left;
+            padding: $section-parallax-quote-padding;
+            font-size: $section-parallax-quote-font-size;
+        }
+
         &::before {
             position: absolute;
             content: "";
-            top: $section-parallax-quote-padding;
-            left: 0;
+            top: $section-parallax-quote-padding-small;
+            right: 100%;
             width: $section-parallax-quote-before-width;
-            height: calc(100% - #{$section-parallax-quote-padding}  * 2);
+            height: calc(100% - #{$section-parallax-quote-padding-small}  * 2);
             background-color: $section-parallax-quote-before-backgrond-color;
             z-index: -1;
+
+            @media screen and (min-width: 768px) {
+                top: $section-parallax-quote-padding;
+                height: calc(100% - #{$section-parallax-quote-padding}  * 2);
+            }
         }
     }
 }

@@ -8,6 +8,9 @@
     font-family: $section-font-family;
     background: $section-background-color;
 
+/**
+ *hero
+ */
     &--hero {
         justify-content: flex-start;
         align-items: center;
@@ -23,6 +26,9 @@
         }
     }
 
+/**
+ *background color
+ */
     &:nth-of-type(4),
     &:nth-of-type(7) {
         background: darken($section-background-color, 5%);
@@ -81,11 +87,16 @@
         width: 100%;
         height: 100%;
         margin: 0 auto;
-        padding: $section-body-padding;
+        padding: $section-body-padding-small;
+
+        @media screen and (min-width: 680px) {
+            padding: $section-body-padding;
+        }
     }
 
     &__title {
         margin: 0;
+        margin-left: $section-title-margin-left;
         padding-bottom: $section-title-padding;
         font-family: $section-title-font-family;
         font-size: $section-title-font-size;
@@ -96,14 +107,14 @@
             color: $section-title-font-white-color;
         }
 
-        &--center {
-            text-align: center;
+        @media screen and (min-width: 680px) {
+            margin-left: 0;
         }
     }
 
     &__text {
-        font-size: $section-text-font-size;
-        color: $section-text-font-color;
+        font-size: $section-font-size;
+        color: $section-font-color;
         margin: $section-text-margin;
         margin-top: $section-text-margin * 2;
 

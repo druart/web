@@ -6,9 +6,11 @@
  *variables
  */
 /*spacing*/
+/*breakpoints*/
 /*fonts*/
 /*color*/
 /*body*/
+/*modal*/
 /*section*/
 /*parallax*/
 /*grid*/
@@ -52,6 +54,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.overflow-stop {
+  overflow: hidden;
+}
+
 h1, h2, h3, h4, p, ul, li {
   margin: 0;
   padding: 0;
@@ -70,7 +76,7 @@ a {
 }
 
 /**
- *Utilities
+ *margin
  */
 .margin--top-small {
   margin-top: 12px !important;
@@ -80,12 +86,31 @@ a {
   margin-top: 24px !important;
 }
 
+.margen-left-none {
+  margin-left: 0 !important;
+}
+
+/**
+ *text align
+ */
 .text-align-left {
   text-align: left !important;
 }
 
 .text-align-right {
   text-align: right !important;
+}
+
+.text-align-center {
+  text-align: center !important;
+}
+
+/**
+ *form
+ */
+.circular-form {
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 /**
@@ -101,7 +126,7 @@ a {
 
 @media screen and (min-width: 680px) {
   .grid--margin {
-    margin: 10vh 6vh;
+    margin: 10vh 12vh;
   }
 }
 
@@ -134,47 +159,33 @@ a {
   background-color: #27282e;
 }
 
-.global-flex.global-flex {
-  justify-content: center;
-  max-width: 83%;
-  margin: 0 auto;
-}
-
 .global-flex__item {
-  display: block;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
   padding: 0;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1040px) {
+  .global-flex__item--half {
+    flex-basis: 50% !important;
+  }
+}
+
+.global-flex__item--small {
+  padding-top: 24px;
+}
+
+@media screen and (min-width: 1040px) {
+  .global-flex__item--small {
+    flex-basis: 33% !important;
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 480px) {
   .global-flex__item {
     flex-basis: 100%;
-  }
-}
-
-.global-flex__item--half {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  padding-left: 12px;
-}
-
-@media screen and (min-width: 1400px) {
-  .global-flex__item--half {
-    width: calc(50% - 12px * 4);
-    padding: 12px;
-    background-color: transparent !important;
-    background: transparent !important;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .global-flex__item {
-    min-width: 180px;
   }
 }
 
@@ -1706,6 +1717,130 @@ animation-fill-mode: configures what values are applied by the animation before 
 	$html structura
 \*------------------------------------*/
 /**
+ *modal
+ */
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  z-index: 999;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.js-card-builder,
+.modal {
+  color: #aaa;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 480px;
+  margin: 0 auto;
+  background-color: #fbfbfb;
+  animation-name: zoomInUp;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+@media screen and (min-width: 680px) and (max-width: 959px) {
+  .modal {
+    width: 80vw;
+    height: calc(100vh - 5vh * 2);
+    margin-top: 5vh;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .modal {
+    width: 60vw;
+    height: calc(100vh - 10vh * 2);
+    margin-top: 10vh;
+  }
+}
+
+.modal__img, .modal__thumb {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal__img {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  height: 30%;
+}
+
+.modal__img--color {
+  background-color: #8fbc8f;
+}
+
+.modal__img--small {
+  background-size: contain;
+}
+
+.modal__thumb {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.modal__content {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  padding: 24px;
+  padding-bottom: 0;
+  overflow-y: auto;
+}
+
+.modal__title {
+  margin-bottom: 24px;
+  color: #5f9ede;
+  font-family: "Gentium Basic", sans-serif;
+  font-size: 32px;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 1040px) {
+  .modal__title {
+    font-size: 36px;
+  }
+}
+
+.modal__description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin: 12px;
+}
+
+@media screen and (min-width: 1040px) {
+  .modal__description {
+    font-size: 24px;
+  }
+}
+
+.modal__footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  padding: 12px;
+}
+
+/**
  *header
  */
 .header {
@@ -1750,6 +1885,12 @@ animation-fill-mode: configures what values are applied by the animation before 
   width: 100%;
   font-family: "Montserrat", sans-serif;
   background: #fbfbfb;
+  /**
+ *hero
+ */
+  /**
+ *background color
+ */
   /**
  *footer
  */
@@ -1827,13 +1968,20 @@ animation-fill-mode: configures what values are applied by the animation before 
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  padding: 20vh 6vw;
+  padding: 10vh 0;
+}
+
+@media screen and (min-width: 680px) {
+  .section__body {
+    padding: 20vh 6vw;
+  }
 }
 
 .section__title {
   margin: 0;
+  margin-left: 24px;
   padding-bottom: 12px;
-  font-family: "Gentium Basic", serif, sans-serif;
+  font-family: "Gentium Basic", sans-serif;
   font-size: 36px;
   color: #5f9ede;
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
@@ -1843,8 +1991,10 @@ animation-fill-mode: configures what values are applied by the animation before 
   color: #ccc;
 }
 
-.section__title--center {
-  text-align: center;
+@media screen and (min-width: 680px) {
+  .section__title {
+    margin-left: 0;
+  }
 }
 
 .section__text {
@@ -1868,12 +2018,18 @@ animation-fill-mode: configures what values are applied by the animation before 
 .section-parallax {
   display: block;
   position: relative;
-  height: 400px;
+  height: 220px;
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .section-parallax {
+    height: 400px;
+  }
 }
 
 .section-parallax::before {
@@ -1897,25 +2053,45 @@ animation-fill-mode: configures what values are applied by the animation before 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: calc(100% - 12px - 12px * 2);
   margin: 0;
-  margin-left: -8vw;
-  padding: 4vw;
+  margin-left: 12px;
+  padding: 12px;
   color: #fbfbfb;
-  font-size: 24px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: 2px;
 }
 
+@media screen and (min-width: 768px) {
+  .section-parallax__quote-text {
+    width: calc(100% - 24px - 24px * 2);
+    max-width: 780px;
+    margin-left: 24px;
+    padding: 24px;
+    font-size: 26px;
+  }
+}
+
 .section-parallax__quote-text::before {
   position: absolute;
   content: "";
-  top: 4vw;
-  left: 0;
+  top: 12px;
+  right: 100%;
   width: 8px;
-  height: calc(100% - 4vw  * 2);
+  height: calc(100% - 12px  * 2);
   background-color: #f3aa23;
   z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .section-parallax__quote-text::before {
+    top: 24px;
+    height: calc(100% - 24px  * 2);
+  }
 }
 
 /**
@@ -1975,7 +2151,7 @@ animation-fill-mode: configures what values are applied by the animation before 
   width: 100%;
   margin: 0;
   font-size: 26px;
-  font-family: "Bebas Neue", cursive, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.3);
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
@@ -2016,7 +2192,7 @@ animation-fill-mode: configures what values are applied by the animation before 
 
 .hero__about {
   font-size: 1.1em;
-  font-family: "Bebas Neue", cursive, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   color: rgba(0, 0, 0, 0.2);
   align-self: flex-end;
   letter-spacing: 0.1em;
@@ -2142,7 +2318,7 @@ animation-fill-mode: configures what values are applied by the animation before 
   opacity: 0;
   outline: none;
   cursor: pointer;
-  z-index: 999;
+  z-index: 998;
 }
 
 @media screen and (min-width: 680px) {
@@ -2202,6 +2378,95 @@ animation-fill-mode: configures what values are applied by the animation before 
   bottom: 5vh;
   visibility: visible;
   opacity: 0.8;
+}
+
+/**
+ *nav list buttons
+ */
+.nav-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav-list__btn {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  margin: 0 6px;
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+
+.nav-list__btn--fill {
+  flex-grow: 1;
+}
+
+.nav-list__btn:hover {
+  background-color: #aaa;
+  color: #fbfbfb;
+}
+
+.nav-list__btn.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/**
+ underline button
+ */
+.underline__btn {
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  font-weight: 600;
+  color: #fbfbfb;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.underline__btn::before, .underline__btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  transition: width 0.4s ease-in-out;
+}
+
+.underline__btn:hover {
+  color: #5f9ede;
+}
+
+.underline__btn:hover::before, .underline__btn:hover::after {
+  bottom: 8px;
+  width: calc(100% - 12px * 2);
+}
+
+.underline__btn:hover::before {
+  height: 2px;
+  background-color: #5f9ede;
+}
+
+.underline__btn:hover::after {
+  height: 1px;
+  background-color: #89b8e7;
 }
 
 /**
@@ -2281,16 +2546,17 @@ animation-fill-mode: configures what values are applied by the animation before 
   color: #89dfe6;
 }
 
-.nh-list__item a:hover::before {
-  bottom: -0.14rem;
+.nh-list__item a:hover::before, .nh-list__item a:hover::after {
+  bottom: -2px;
   width: 100%;
+}
+
+.nh-list__item a:hover::before {
   height: 2px;
   background-color: #89dfe6;
 }
 
 .nh-list__item a:hover::after {
-  bottom: -0.14rem;
-  width: 100%;
   height: 1px;
   background-color: #b3eaef;
 }
@@ -2440,29 +2706,35 @@ animation-fill-mode: configures what values are applied by the animation before 
   margin: 0;
   padding: 0;
   background-color: #fbfbfb;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   border: 1px solid #f3aa23;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
+  overflow: hidden;
 }
 
 .card:hover {
   background-color: #f6bd53;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
   transform: translate3d(0, -4px, 0);
 }
 
-.card:hover .card__title,
+.card:hover .card__title {
+  color: white;
+}
+
 .card:hover .card__description {
-  color: #626262;
+  color: #717171;
 }
 
 .card__img {
   flex-grow: 1;
   flex-shrink: 1;
   width: 100%;
-  max-height: 30%;
+  min-height: 280px;
+  height: 30%;
+  background-color: #fbfbfb;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -2484,7 +2756,24 @@ animation-fill-mode: configures what values are applied by the animation before 
 .card__description {
   padding: 24px;
   padding-top: 0;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+.card__footer {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: transparent;
+  transform: translate3d(0, 100%, 0);
+}
+
+.card:hover .card__footer--pop-up {
+  height: auto;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.8s ease;
 }
 
 /*------------------------------------*\

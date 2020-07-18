@@ -68,16 +68,18 @@
     & a:hover {
         color: $nav-link-color-hover;
 
-        &::before {
-            bottom: -0.14rem;
+        &::before,
+        &::after {
+            bottom: -2px;
             width: 100%;
+        }
+
+        &::before {
             height: 2px;
             background-color: $nav-link-color-hover;
         }
 
         &::after {
-            bottom: -0.14rem;
-            width: 100%;
             height: 1px;
             background-color: lighten($nav-link-color-hover, 10%);
         }
