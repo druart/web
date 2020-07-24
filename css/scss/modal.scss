@@ -1,7 +1,8 @@
 /**
  *modal
  */
-.overlay {
+.overlay,
+.overlay-active {
     display: none;
     position: fixed;
     left: 0;
@@ -25,9 +26,8 @@
 .modal {
     position: relative;
     display: flex;
+    justify-content: stretch;
     flex-direction: column;
-    height: 100%;
-    min-height: $modal-min-height;
     margin: 0 auto;
     background-color: $modal-background-color;
     animation-name: zoomInUp;
@@ -36,14 +36,14 @@
     
     @media screen and (min-width: 680px) and (max-width: 959px) {
         width: $modal-width-large;
-        height: calc(100vh - #{$modal-margin-small} * 2);
         margin-top: $modal-margin-small;
+        margin-bottom: $modal-margin-small;
     }
 
     @media screen and (min-width: 960px) {
         width: $modal-width-small;
-        height: calc(100vh - #{$modal-margin-medium} * 2);
         margin-top: $modal-margin-medium;
+        margin-bottom: $modal-margin-medium;
     }
 
     &__img,

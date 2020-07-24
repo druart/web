@@ -90,6 +90,11 @@ a {
   margin-left: 0 !important;
 }
 
+.margin-left-right-small {
+  margin-left: 12px !important;
+  margin-right: 12px !important;
+}
+
 /**
  *text align
  */
@@ -1719,7 +1724,8 @@ animation-fill-mode: configures what values are applied by the animation before 
 /**
  *modal
  */
-.overlay {
+.overlay,
+.overlay-active {
   display: none;
   position: fixed;
   left: 0;
@@ -1731,7 +1737,8 @@ animation-fill-mode: configures what values are applied by the animation before 
   z-index: 999;
 }
 
-.overlay.active {
+.overlay.active,
+.overlay-active.active {
   display: block;
 }
 
@@ -1743,9 +1750,8 @@ animation-fill-mode: configures what values are applied by the animation before 
 .modal {
   position: relative;
   display: flex;
+  justify-content: stretch;
   flex-direction: column;
-  height: 100%;
-  min-height: 480px;
   margin: 0 auto;
   background-color: #fbfbfb;
   animation-name: zoomInUp;
@@ -1756,16 +1762,16 @@ animation-fill-mode: configures what values are applied by the animation before 
 @media screen and (min-width: 680px) and (max-width: 959px) {
   .modal {
     width: 80vw;
-    height: calc(100vh - 5vh * 2);
-    margin-top: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
 }
 
 @media screen and (min-width: 960px) {
   .modal {
     width: 60vw;
-    height: calc(100vh - 10vh * 2);
-    margin-top: 10vh;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
   }
 }
 
@@ -1780,7 +1786,7 @@ animation-fill-mode: configures what values are applied by the animation before 
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
-  height: 30%;
+  height: 280px;
 }
 
 .modal__img--color {
@@ -3223,8 +3229,8 @@ version: 1.2.0
   position: absolute;
   top: 20px;
   right: 40px;
-  height: 280px;
-  width: 280px;
+  height: 320px;
+  width: 320px;
   border-radius: 100%;
   background-color: #ccc;
   background-image: radial-gradient(circle at 0 20%, #ccc 0%, transparent 65%, #bfbfbf 70%);
@@ -3240,57 +3246,57 @@ version: 1.2.0
 }
 
 .moon .spot--one {
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
   top: 15%;
   left: 40%;
 }
 
 .moon .spot--two {
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
   top: 63%;
   left: 48%;
 }
 
 .moon .spot--three {
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
   top: 28%;
   left: 14%;
 }
 
 .moon .spot--four {
-  height: 46.6666666667px;
-  width: 46.6666666667px;
+  height: 53.3333333333px;
+  width: 53.3333333333px;
   top: 64%;
   left: 15%;
 }
 
 .moon .spot--five {
-  height: 40px;
-  width: 40px;
+  height: 45.7142857143px;
+  width: 45.7142857143px;
   top: 38%;
   left: 73%;
 }
 
 .moon .spot--six {
-  height: 20px;
-  width: 20px;
+  height: 22.8571428571px;
+  width: 22.8571428571px;
   top: 17%;
   left: 20%;
 }
 
 .moon .spot--seven {
-  height: 17.5px;
-  width: 17.5px;
+  height: 20px;
+  width: 20px;
   top: 63%;
   left: 35%;
 }
 
 .moon .spot--eigth {
-  height: 17.5px;
-  width: 17.5px;
+  height: 20px;
+  width: 20px;
   top: 48%;
   left: 56%;
 }
@@ -3303,7 +3309,7 @@ version: 1.2.0
     transform: scaleY(1);
   }
   1% {
-    transform: scaleY(0.1);
+    transform: scaleY(0.01);
   }
   2% {
     transform: scaleY(1);

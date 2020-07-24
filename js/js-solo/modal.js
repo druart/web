@@ -68,14 +68,15 @@ $(document).ready(function() {
         e.preventDefault();
         thisElement = $(this).attr("data-obj");
         modalContent(thisElement);
-        $(".overlay").css({ display: "block" });
+        $(".overlay").addClass("active");
         $('body').addClass("overflow-stop");
         dissBtn();
     });
 
 //close modal
     $(".js-close").click(function() {
-        $(".overlay").css({ display: "none" });
+        $(".overlay-active").removeClass("active");
+        $(".overlay").removeClass("active");
         $('body').removeClass("overflow-stop");
     });
 

@@ -4,7 +4,7 @@ copyright© druArt 2018-2020
 version: 1.2.0
 */
 $left-background-color: rgb(45, 184, 32);
-$moon-size: 280px;
+$moon-size: 320px;
 $moon-color: #ccc;//rgb(209, 70, 22)
 $dark-moon-color: darken($moon-color, 5%);
 $darker-moon-color: darken($moon-color, 10%);
@@ -560,14 +560,14 @@ $darkest-moon-color: darken($moon-color, 15%);
         transform: scaleY(1);
     }
     1% {
-        transform: scaleY(0.1);
+        transform: scaleY(0.01);
     }
     2% {
         transform: scaleY(1);
     }
     100% {
         transform: scaleY(1);
-    }	
+    }
 }
 
 @keyframes moveHead {

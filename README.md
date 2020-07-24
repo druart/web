@@ -1,3 +1,2 @@
 # web
-html, css, javascript
-discord web hooks test
+HTML, CSS/SCSS, jQuery
