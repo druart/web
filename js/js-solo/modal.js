@@ -31,7 +31,7 @@ $(document).ready(function() {
 
     //Create card structure:
     var cardElements =
-        '<div class="card">' +
+        '<div class="card  card--border">' +
             '<div class="card__img" style="' + dataCard[0].dataImg + '"></div>' +
             '<div class="card__content">' +
                 '<h3 class="card__title">' + dataCard[0].dataTitle + '</h3>' +

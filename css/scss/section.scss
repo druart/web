@@ -82,7 +82,6 @@
     }
 
     &__body {
-        position: relative;
         max-width: $section-body-max-width;
         width: 100%;
         height: 100%;
@@ -91,6 +90,10 @@
 
         @media screen and (min-width: 680px) {
             padding: $section-body-padding;
+        }
+
+        &--top-small {
+            padding-top: $section-body-top-small-padding;
         }
     }
 

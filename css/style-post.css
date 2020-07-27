@@ -1969,7 +1969,6 @@ animation-fill-mode: configures what values are applied by the animation before 
 }
 
 .section__body {
-  position: relative;
   max-width: 1600px;
   width: 100%;
   height: 100%;
@@ -1981,6 +1980,10 @@ animation-fill-mode: configures what values are applied by the animation before 
   .section__body {
     padding: 20vh 6vw;
   }
+}
+
+.section__body--top-small {
+  padding-top: 5vh;
 }
 
 .section__title {
@@ -2711,26 +2714,29 @@ animation-fill-mode: configures what values are applied by the animation before 
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #fbfbfb;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  border: 1px solid #f3aa23;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease-in-out;
   overflow: hidden;
 }
 
-.card:hover {
+.card--border {
+  background-color: #fbfbfb;
+  border: 1px solid #f3aa23;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.card--border:hover {
   background-color: #f6bd53;
   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
   transform: translate3d(0, -4px, 0);
 }
 
-.card:hover .card__title {
+.card--border:hover .card__title {
   color: white;
 }
 
-.card:hover .card__description {
+.card--border:hover .card__description {
   color: #717171;
 }
 
@@ -3346,5 +3352,301 @@ version: 1.2.0
   }
   100% {
     transform: translateY(-8px) scale(0.96);
+  }
+}
+
+/*------------------------------------*\
+	$map interactive
+\*------------------------------------*/
+/**
+ *map interactive
+ */
+.section--header {
+  padding: 12px;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+}
+
+.section__title--decoration {
+  margin: 0;
+  padding: 12px;
+  border-top: 2px solid #f3aa23;
+  border-bottom: 2px solid #f3aa23;
+  color: #f3aa23;
+  font-size: 52px;
+  letter-spacing: 2px;
+}
+
+.wrap-content {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding: 24px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 920px) {
+  .wrap-content {
+    flex-direction: column;
+  }
+}
+
+.menu-bar {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 30%;
+  background-color: #fbfbfb;
+  color: #aaa;
+}
+
+.menu-bar__header {
+  width: 100%;
+  border-bottom: 6px solid transparent;
+  overflow: hidden;
+}
+
+.menu-bar .wrap-svg {
+  background-color: #99cbf9;
+  opacity: 0.8;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+.menu-bar .wrap-svg:hover {
+  opacity: 1;
+  transform: scale(2.2);
+  cursor: pointer;
+}
+
+.menu-bar__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.keep-highlighted {
+  background-color: #c8c8c8;
+}
+
+/**
+*[1] toggle via js with class .is-active
+*[2] hidding modified button when the screen is small
+*/
+.btn {
+  width: 50%;
+  color: #aaa;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 48px;
+  list-style-type: none;
+  transition: color, background-color 0.6s ease;
+}
+
+.btn--half {
+  width: 50%;
+}
+
+@media screen and (min-width: 920px) {
+  .btn--half {
+    width: 100%;
+  }
+}
+
+.btn--sub {
+  width: 100%;
+  padding-left: 24px !important;
+  border-top: 1px solid gainsboro;
+  background-color: #e7e7e7;
+  text-align: left;
+  font-size: 12px;
+}
+
+.btn--sub:hover {
+  background-color: #adadad !important;
+}
+
+.btn:hover {
+  background-color: #777777;
+  color: #fbfbfb;
+  cursor: pointer;
+}
+
+.btn--subnav {
+  display: none;
+}
+
+.btn--subnav.is-active {
+  display: none;
+}
+
+@media screen and (min-width: 920px) {
+  .btn--subnav.is-active {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+}
+
+.map {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 70%;
+  margin: 0;
+  /**
+    *[3] toggle class with js (.show), used height = 0 to keep the map aligned on top
+    */
+  /**
+    *[5] limiting the view of text to a fixed scrolling height, depending of the device, active with overflow auto
+    */
+}
+
+.map__container {
+  border-top: 6px solid transparent;
+  border-left: 0;
+  border-right: 0;
+}
+
+@media screen and (min-width: 920px) {
+  .map__container {
+    border-top: none;
+    border-left: 6px solid transparent;
+  }
+}
+
+.map__svg {
+  height: 0;
+  background-color: #5e99d0;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+  overflow: hidden;
+}
+
+.map__svg.show {
+  height: 100%;
+  opacity: 1;
+}
+
+.map__info {
+  display: none;
+  width: 100%;
+  max-height: 25vh;
+  padding: 12px 24px;
+  vertical-align: top;
+  color: #aaa;
+  overflow: auto;
+}
+
+.map__info.show-info {
+  display: block;
+}
+
+.map__info .info-title {
+  margin-bottom: 24px;
+  padding-left: 12px;
+  color: #f3aa23;
+  font-family: "Gentium Basic", sans-serif;
+  font-size: 24px;
+  border-bottom: 1px solid #f3aa23;
+}
+
+.map__info .info-title--lg {
+  font-size: 32px;
+  text-align: right;
+}
+
+.map__info .info-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+/*
+ *svg attributes and data
+ */
+.svg-scaling {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+[data-area].active path {
+  fill: #c8c8c8;
+}
+
+[data-item].highlight {
+  fill: #494848;
+}
+
+[data-item] {
+  fill: #a5a49a;
+}
+
+[data-item]:hover {
+  fill: #494848;
+  cursor: pointer;
+}
+
+[data-gmr] {
+  display: none;
+}
+
+/*
+ *waves effect when map is to small,
+ *it helps to locate the small islands
+ */
+.highlight-indicator {
+  position: absolute;
+  margin-top: -5px;
+  margin-left: -5px;
+  z-index: 100;
+  display: none;
+}
+
+.highlight-indicator.active {
+  display: inline-block;
+}
+
+.waves {
+  animation-name: waves;
+}
+
+.waves::before, .waves::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: #626262;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.waves::before {
+  animation: waveAnimate 3s infinite ease-out;
+}
+
+.waves::after {
+  opacity: 0;
+  animation: waveAnimate 3s 1.5s infinite ease-out;
+}
+
+@keyframes waveAnimate {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+    transform-origin: center;
   }
 }

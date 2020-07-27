@@ -29,25 +29,28 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: $card-background-color;
     font-family: $card-font-family;
     text-decoration: none;
-    border: $card-border;
-    box-shadow: $card-shadow;
-    transition: all 0.2s ease-in-out;
     overflow: hidden;
 
-    &:hover {
-        background-color: lighten($card-background-color-hover, 10%);
-        box-shadow: $card-shadow-hover;
-        transform: $card-transforme-effect-hover;
+    &--border {
+        background-color: $card-background-color;
+        border: $card-border;
+        box-shadow: $card-shadow;
+        transition: all 0.2s ease-in-out;
 
-        & .card__title {
-            color: lighten($card-background-color, 4%);
-        }
+        &:hover {
+            background-color: lighten($card-background-color-hover, 10%);
+            box-shadow: $card-shadow-hover;
+            transform: $card-transforme-effect-hover;
 
-        & .card__description {
-            color: darken($card-background-color, 54%);
+            & .card__title {
+                color: lighten($card-background-color, 4%);
+            }
+
+            & .card__description {
+                color: darken($card-background-color, 54%);
+            }
         }
     }
 
