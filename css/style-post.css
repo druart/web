@@ -3438,7 +3438,7 @@ version: 1.2.0
 *[2] hidding modified button when the screen is small
 */
 .btn {
-  width: 50%;
+  width: 100%;
   color: #aaa;
   font-size: 16px;
   font-weight: 600;
@@ -3448,12 +3448,14 @@ version: 1.2.0
   transition: color, background-color 0.6s ease;
 }
 
-.btn--half {
-  width: 50%;
+@media screen and (min-width: 560px) and (max-width: 920px) {
+  .btn {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 920px) {
-  .btn--half {
+  .btn {
     width: 100%;
   }
 }
@@ -3491,7 +3493,7 @@ version: 1.2.0
     width: 100%;
     height: 30vh;
     flex-wrap: wrap;
-    overflow: hidden;
+    overflow-y: auto;
   }
 }
 
@@ -3578,12 +3580,9 @@ version: 1.2.0
   height: auto;
 }
 
-[data-area].active path {
-  fill: #c8c8c8;
-}
-
+[data-area].active path,
 [data-item].highlight {
-  fill: #494848;
+  fill: #737266;
 }
 
 [data-item] {
@@ -3591,7 +3590,7 @@ version: 1.2.0
 }
 
 [data-item]:hover {
-  fill: #494848;
+  fill: #737266;
   cursor: pointer;
 }
 

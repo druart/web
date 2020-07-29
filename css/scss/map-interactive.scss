@@ -5,11 +5,10 @@ $section-header-padding: $basis-spacing;
 $menu-bar-width: 30%;
 $menu-bar-background-color: $WHITE;
 $map-info-font-color: $GRAY;
-$provincias-color-highlight: darken($WHITE, 20%);
-$provincias-color-highlight-two: darken($WHITE, 70%);
 $header-border-top: 2px solid $ORANGE;
 $header-border-bottom: 2px solid $ORANGE;
-
+$data-background-color: #a5a49a;
+$data-background-color-highlight: darken($data-background-color, 20%);
 $waves-animation-width: 10px;
 $waves-animation-height: $waves-animation-width;
 //structure web
@@ -88,7 +87,7 @@ $waves-animation-height: $waves-animation-width;
 *[2] hidding modified button when the screen is small
 */
 .btn {
-    width: 50%;
+    width: 100%;
     color: $GRAY;
     font-size: 16px;
     font-weight: 600;
@@ -97,12 +96,12 @@ $waves-animation-height: $waves-animation-width;
     list-style-type: none;
     transition: color, background-color 0.6s ease;
 
-    &--half {
+    @media screen and (min-width: 560px)  and (max-width: 920px) {
         width: 50%;
+    }
 
-        @media screen and (min-width: 920px) {
-            width: 100%;
-        }
+    @media screen and (min-width: 920px) {
+        width: 100%;
     }
 
     &--sub {
@@ -139,7 +138,7 @@ $waves-animation-height: $waves-animation-width;
                 width: 100%;
                 height: 30vh;
                 flex-wrap: wrap;
-                overflow: hidden;
+                overflow-y: auto;
             }
         }
     }
@@ -227,19 +226,16 @@ $waves-animation-height: $waves-animation-width;
     height: auto;
 }
 
-[data-area].active path {
-    fill: $provincias-color-highlight;
-}
-
+[data-area].active path,
 [data-item].highlight {
-    fill: $provincias-color-highlight-two;
+    fill: $data-background-color-highlight;
 }
 
 [data-item] {
-    fill: #a5a49a;
+    fill: $data-background-color;
 
     &:hover {
-        fill: $provincias-color-highlight-two;
+        fill: $data-background-color-highlight;
         cursor: pointer;
     }
 }
