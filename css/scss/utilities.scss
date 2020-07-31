@@ -1,21 +1,24 @@
 /**
  *margin
  */
-.margin--top-small {
+.margin-top-small {
     margin-top: $basis-spacing !important;
 }
 
-.margin--top-medium {
+.margin-top-medium {
     margin-top: $double-spacing !important;
-}
-
-.margen-left-none {
-    margin-left: 0 !important;
 }
 
 .margin-left-right-small {
     margin-left: $basis-spacing !important;
     margin-right: $basis-spacing !important;
+}
+
+/**
+ *padding
+ */
+.padding-small {
+    padding: $basis-spacing !important;
 }
 
 /**
@@ -39,4 +42,15 @@
 .circular-form {
     border-radius: 50%;
     overflow: hidden;
+}
+
+/**
+ *flex
+ */
+ .fc-center {
+     justify-content: center !important;
+ }
+
+.fd-column {
+    flex-direction: column !important;
 }

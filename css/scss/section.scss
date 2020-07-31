@@ -26,6 +26,15 @@
         }
     }
 
+    &--hero-small {
+        display: block;
+        height: $section-hero-small-height;
+        background-image: url("../images/png/airport.png");
+        background-position: top left;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
 /**
  *background color
  */
@@ -100,6 +109,7 @@
     &__title {
         margin: 0;
         margin-left: $section-title-margin-left;
+        margin-right: $section-title-margin-right;
         padding-bottom: $section-title-padding;
         font-family: $section-title-font-family;
         font-size: $section-title-font-size;
@@ -127,6 +137,17 @@
     }
 
     &__element--hidden {
-        opacity: 0;
+        opacity: 1;
+
+        @media screen and (min-width: 1040px) {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.4s ease-in;
+
+            &.animate {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     }
 }

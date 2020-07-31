@@ -3,18 +3,20 @@ Autor: Diego Ruiz Jarrin
 copyright© druArt 2018-2020
 version: 1.2.0
 */
-$left-background-color: rgb(45, 184, 32);
+$left-background-color: #2db820;
 $moon-size: 320px;
 $moon-color: #ccc;//rgb(209, 70, 22)
 $dark-moon-color: darken($moon-color, 5%);
 $darker-moon-color: darken($moon-color, 10%);
 $darkest-moon-color: darken($moon-color, 15%);
+$pure-css-font-color: #b1b1b1;
+$pure-css-border-color: $pure-css-font-color;
 .hero-wrap {
     position: relative;
     height: 600px;
     margin: 0;
     padding: 0;
-    background-color: #2b2b2b;
+    background: linear-gradient(#777, #444);
     overflow: hidden;
 }
 
@@ -25,9 +27,9 @@ $darkest-moon-color: darken($moon-color, 15%);
     padding: 4px;
     padding-left: 0;
     font-size: 14px;
-    color: #4b4b4b;
+    color: $pure-css-font-color;
     font-weight: 600;
-    border: 2px solid #4b4b4b;
+    border: 2px solid $pure-css-border-color;
     border-left-width: 0;
     border-radius: 4px;
     text-transform: uppercase;
@@ -67,17 +69,19 @@ $darkest-moon-color: darken($moon-color, 15%);
         width: 156px;
         height: 148px;
         border-radius: 50%;
-        background-color: #deefee;
+        background-color: #c7c0b4;
     }
 
     &::before {
         left: 0;
-        border-left: 4px solid #666;
+        border-left: 8px solid #948f87;
+        border-bottom: 4px solid #948f87;
     }
 
     &::after {
         right: 0;
-        border-right: 4px solid #666;
+        border-right: 8px solid #948f87;
+        border-bottom: 4px solid #948f87;
     }
 }
 
@@ -96,8 +100,6 @@ $darkest-moon-color: darken($moon-color, 15%);
         transform: rotate(-32deg);
     }
 
-    &::before,
-    &::after,
     &::before,
     &::after {
         content: "";
@@ -138,8 +140,9 @@ $darkest-moon-color: darken($moon-color, 15%);
     height: 120px;
     background-color: #ffa31a;
     border-radius: 50%;
+    border-bottom: 6px solid #cc7a00;
+    border-top: 4px solid #fdcc83;
     animation: blick 10s linear infinite;
-    border-bottom: 1px solid #cc7a00;
     z-index: 999;
 
     &::before,
@@ -194,7 +197,7 @@ $darkest-moon-color: darken($moon-color, 15%);
         content: "";
         position: absolute;
         top: 0;
-        border-bottom: 58px solid transparent;
+        border-bottom: 40px solid transparent;
     }
 
     &::before {
@@ -354,8 +357,6 @@ $darkest-moon-color: darken($moon-color, 15%);
     }
 
     &::before,
-    &::after,
-    &::before,
     &::after {
         content: "";
         position: absolute;
@@ -450,7 +451,7 @@ $darkest-moon-color: darken($moon-color, 15%);
     right: 10px;
     width: 40px;
     height: 20px;
-    background-color: $left-background-color;
+    background-color: darken($left-background-color, 10%);
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
     transform: rotate(-25deg);

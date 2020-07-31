@@ -3,7 +3,10 @@
  */
 $section-header-padding: $basis-spacing;
 $menu-bar-width: 30%;
+$menu-bar-min-width: 280px;
+$menu-bar-slide-min-width: 260px;
 $menu-bar-background-color: $WHITE;
+$menu-bar-slideshadow: 0 3px 2px rgba(0, 0, 0, 0.1);
 $map-info-font-color: $GRAY;
 $header-border-top: 2px solid $ORANGE;
 $header-border-bottom: 2px solid $ORANGE;
@@ -27,6 +30,10 @@ $waves-animation-height: $waves-animation-width;
     color: $ORANGE;
     font-size: 52px;
     letter-spacing: 2px;
+
+    @media screen and (max-width: 920px) {
+        font-size: 44px;
+    }
 }
 
 .wrap-content {
@@ -35,8 +42,9 @@ $waves-animation-height: $waves-animation-width;
     margin: 0 auto;
     margin-top: 24px;
     padding: $double-spacing;
-    background-color: darken($WHITE, 3%);
+    background-color: lighten($GRAY, 28%);
     border-radius: 8px;
+    overflow: hidden;
 
     @media screen and (max-width: 920px) {
         flex-direction: column;
@@ -47,6 +55,7 @@ $waves-animation-height: $waves-animation-width;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: $menu-bar-width;
+    min-width: $menu-bar-min-width;
     background-color: $menu-bar-background-color;
     color: $GRAY;
 
@@ -69,6 +78,22 @@ $waves-animation-height: $waves-animation-width;
         }
     }
 
+    &--slide {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        min-width: $menu-bar-slide-min-width;
+        box-shadow: $menu-bar-slideshadow;
+        opacity: 0;
+        transition: all 0.4s ease-out;
+        z-index: 98;
+
+        &.is-show {
+            right: 0;
+            opacity: 1;
+        }
+    }
+
     &__list {
         position: relative;
         display: flex;
@@ -76,10 +101,6 @@ $waves-animation-height: $waves-animation-width;
         padding: 0;
         margin: 0;
     }
-}
-//class active in small devices to highlight the button when the mouse levaes
-.keep-highlighted {
-    background-color: darken($WHITE, 20%);
 }
 
 /**
@@ -91,10 +112,13 @@ $waves-animation-height: $waves-animation-width;
     color: $GRAY;
     font-size: 16px;
     font-weight: 600;
-    text-align: center;
     line-height: 48px;
     list-style-type: none;
     transition: color, background-color 0.6s ease;
+
+    &:hover {
+        background-color: darken($WHITE, 5%);
+    }
 
     @media screen and (min-width: 560px)  and (max-width: 920px) {
         width: 50%;
@@ -111,16 +135,11 @@ $waves-animation-height: $waves-animation-width;
         background-color: darken($WHITE, 8%);
         text-align: left;
         font-size: 12px;
-        
+
         &:hover {
+            color: $WHITE;
             background-color: lighten($GRAY, 1%) !important;
         }
-    }
-    
-    &:hover {
-        background-color: darken($GRAY, 20%);
-        color: $WHITE;
-        cursor: pointer;
     }
 
     &--subnav {
@@ -142,12 +161,50 @@ $waves-animation-height: $waves-animation-width;
             }
         }
     }
+
+    &__icon {
+        position: relative;
+        display: none;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        width: 32px;
+
+        @media screen and (min-width: 920px) {
+            display: block;
+        }
+    }
+
+    &__text {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: auto;
+        text-align: center;
+
+        @media screen and (min-width: 920px) {
+            text-align: left;
+            padding-left: $basis-spacing;
+        }
+    }
+
+    &__icon,
+    &__text {
+        &:hover {
+            background-color: darken($GRAY, 20%);
+            color: $WHITE;
+            cursor: pointer;
+        }
+    }
+
+    &.keep-highlighted {
+        background-color: lighten($GRAY, 30%);
+    }
 }
 
 .map {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 70%;
+    flex-basis: calc(100% - #{$menu-bar-min-width});
     margin: 0;
 
 
@@ -169,7 +226,6 @@ $waves-animation-height: $waves-animation-width;
         height: 0;//[3]
         background-color: #5e99d0;
         opacity: 0;
-        transition: all 0.15s ease-in-out;
         overflow: hidden;
         
         &.show {
@@ -214,6 +270,15 @@ $waves-animation-height: $waves-animation-width;
             font-size: 18px;
         }
     }
+
+    &__menu {
+        position: relative;
+        display: none;
+
+        &.is-show {
+            display: block;
+        }
+    }
 }
 
 /*
@@ -242,6 +307,10 @@ $waves-animation-height: $waves-animation-width;
 
 [data-gmr] {
     display: none;
+}
+
+[data-gmr].is-show {
+    display: block;
 }
 
 /*

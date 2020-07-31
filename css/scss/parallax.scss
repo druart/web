@@ -8,7 +8,6 @@
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
     overflow: hidden;
 
     @media screen and (min-width: 768px) {
@@ -28,7 +27,12 @@
     }
 
     &--first {
-        background-image: $section-parallax-background-image;
+        background-image: $section-parallax-background-image-vertical;
+        background-size: cover;
+
+        @media screen and (min-width: 768px) {
+            background-image: $section-parallax-background-image-horizontal;
+        }
     }
 
     &__quote-text {

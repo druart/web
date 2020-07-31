@@ -5,7 +5,7 @@ $(document).ready(function() {
     
     /**
     type (string): data-* [e.g. item, area]
-    id (string): id of data- aarea or item to toggle
+    id (string): id of data- area or item to toggle
     show (boolean): true = show info, false = hide info
     **/
     //[1] where this function is used
@@ -19,25 +19,32 @@ $(document).ready(function() {
         // set visibility on selected [data-<type>]
         $('[data-' + type + '="' + id + '"]').addClass(showClass);
     }
-    
-    //displaying menus
+
+    //show button list
+    $('.js-show-list').on('click', function() {
+        //remove menu bar active clases
+        $('.nav-icon').removeClass('is-open');
+        $('.menu-bar--slide').removeClass('is-show');
+
+        $(this).closest('.btn').find('.btn--subnav').toggleClass('is-active');
+        $(this).closest('.btn').find('.show-more').toggleClass('is-open');
+    });
+
+    //highlighting map areas on button click
     $('.js-area').on('click', function() {
-        //reset all submenus
+        //remove menu bar active clases
+        $('.show-more').removeClass('is-open');
+        $('.nav-icon').removeClass('is-open');
+        $('.menu-bar--slide').removeClass('is-show');
         $('.btn--subnav').removeClass('is-active');
-        //reset menu
-        $('.btn').removeClass('keep-highlighted');
-        //display submenu with js toggle class = is-active
-        $(this).find('.btn--subnav').toggleClass('is-active');
-        //keep highlight menu button with submanu displayed js toggle class = keep-highlighted
-        $('.btn--subnav.is-active').closest('.btn--subnav').toggleClass('keep-highlighted');
-        
+
         var area = $(this).attr('data-area-id');
         toggleMapInfo('area', area, true);//[1]
     });
-    
-    //highlighting map areas
+
+    //highlighting map areas on button hover
     $('.js-item').on('mouseleave', function() {
-        $('[data-item]').removeClass('highlight waves');
+        $('[data-item]').removeClass('highlight  waves');
         $('.highlight-indicator').removeClass('active');
         var item_id = $(this).attr('data-item-id');
         toggleMapInfo('item', item_id, false);//[1]
@@ -48,10 +55,10 @@ $(document).ready(function() {
         var item_id = $(this).attr('data-item-id');
         //[5] dynamic variable loop to js toggle class = highlight waves, when mouse enter
         var $area = $('[data-item="' + item_id + '"]');
-        $area.addClass('highlight waves');//[5]
+        $area.addClass('highlight  waves');//[5]
         
         //reset class = highlight waves
-        $('.map__info').removeClass('highlight waves');
+        $('.map__info').removeClass('highlight  waves');
         
         //hepls to get the correct svg element
         var areaSize = $area.get(0).getBoundingClientRect();//don´t use bbox when element is resizing, it does not work well.
@@ -98,5 +105,32 @@ $(document).ready(function() {
         // show selected map
         var mapID = $(this).attr('data-map-id');
         $('[data-map="' + mapID + '"]').addClass('show');
+
+        if(mapID == "galapagos") {
+            $('.map__menu').addClass("is-show");
+        } else {
+            $('.map__menu').removeClass("is-show");
+        }
+    });
+
+    //map menu hamburger
+    $('.js-toggle').on('click', function(e) {
+		e.preventDefault();
+        $(this).toggleClass('is-open');
+        $('.menu-bar--slide').toggleClass('is-show');
+        $('.show-more').removeClass('is-open');
+        $('.btn--subnav').removeClass('is-active');
+    });
+    
+    $('.js-show-gmr').on('click', function() {
+        $('[data-gmr]').toggleClass('is-show');
+        $('.nav-icon').removeClass('is-open');
+        $('.menu-bar--slide').removeClass('is-show');
+
+        if($('[data-gmr]').hasClass('is-show')) {
+            $(this).text('Hide GMR');
+        } else {
+            $(this).text('Show GMR');
+        }
     });
 });

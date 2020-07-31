@@ -34,63 +34,66 @@ $modal-width-small: 60vw;
 $modal-margin-medium: 4vh;
 $modal-margin-small: 2vh;
 $modal-image-height: 280px;
+$modal-image-backgrond-color: #8fbc8f;
 $modal-thumb-width: 200px;
 $modal-thumb-height: 200px;
-$modal-image-backgrond-color: #8fbc8f;
 $modal-background-color: $WHITE;
 $modal-title-font-size: 36px;
 $modal-title-font-size-small: 32px;
 $modal-title-font-family: $ff-gentium;
-$modal-description-font-family: $ff-montserrat;
 $modal-title-font-color: $BLUE;
 $modal-title-text-shadow: 3px 3px 2px rgba(0,0,0,0.1);
+$modal-description-font-family: $ff-montserrat;
 $modal-description-font-size: 24px;
 $modal-description-font-size-small: 20px;
 $modal-text-margin: $basis-spacing;
 $modal-font-color: $GRAY;
 
 /*section*/
+$section-hero-small-height: 320px;
 $section-hero-padding: $basis-spacing;
 $section-hero-background: linear-gradient(#f1f1f1 96%, $WHITE 96%) !important;
 $section-background-color: $WHITE;
-$section-footer-background-color: #4e4e4e !important;
 $section-font-family: $ff-montserrat;
+$section-font-size: 22px;
+$section-font-color: $GRAY;
 $section-body-max-width: 1600px;
 $section-body-padding: 20vh 6vw;
 $section-body-padding-small: 10vh 0;
 $section-body-top-small-padding: 5vh;
-$section-title-margin-left: $double-spacing;
-$section-title-font-family: $ff-gentium;
+$section-footer-background-color: #4e4e4e !important;
 $section-footer-span-padding: $basis-spacing;
 $section-footer-span-font-size: 16px;
 $section-footer-span-font-weight: 600;
 $section-footer-span-color: $GRAY;
+$section-title-margin-left: $double-spacing;
+$section-title-margin-right: $basis-spacing;
+$section-title-font-family: $ff-gentium;
 $section-title-padding: $basis-spacing;
 $section-title-font-size: 36px;
 $section-title-font-color: $BLUE;
 $section-title-font-white-color: #ccc;
 $section-title-text-shadow: 3px 3px 2px rgba(0,0,0,0.1);
-$section-font-size: 22px;
 $section-text-margin: $basis-spacing;
-$section-font-color: $GRAY;
 
 /*parallax*/
 $section-parallax-height: 400px;
 $section-parallax-height-small: 220px;
-$section-parallax-quote-max-width: 780px;
+$section-parallax-background-image-vertical: url("../images/tiny_pincels_vertical.png");
+$section-parallax-background-image-horizontal: url("../images/tiny_pincels_horizontal.png");
 $section-parallax-before-backgrond-color: rgba(255,255,255,0.4);
-$section-parallax-background-image: url("../images/tiny_pincels.jpeg");
 $section-parallax-box-shadow: inset 0 0 30px rgba(0,0,0,0.2);
+$section-parallax-quote-max-width: 780px;
 $section-parallax-quote-margin-left: $double-spacing;
 $section-parallax-quote-margin-small-left: $basis-spacing;
 $section-parallax-quote-padding: $double-spacing;
 $section-parallax-quote-padding-small: $basis-spacing;
-$section-parallax-quote-font-color: $WHITE;
+$section-parallax-quote-font-color: #ececec;
 $section-parallax-quote-font-family: $ff-montserrat;
 $section-parallax-quote-font-size: 26px;
 $section-parallax-quote-font-weight: 600;
 $section-parallax-quote-font-size-small: 18px;
-$section-parallax-quote-text-shadow: 0 0 4px rgba(0,0,0,0.6);
+$section-parallax-quote-text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 $section-parallax-quote-line-height: 1.25;
 $section-parallax-quote-letter-spacing: 2px;
 $section-parallax-quote-before-backgrond-color: $ORANGE;
@@ -101,14 +104,14 @@ $grid-margin-small: 4vh 3vh;
 $grid-margin-large: 10vh 12vh;
 
 /*header*/
-$header-text-logo-margin: 0;
-$header-text-logo-padding: 0;
-$header-text-logo-font-familie: $ff-montserrat;
-$header-text-logo-weight-color: rgba(0, 0, 0, 0.3);
-$header-text-logo-font-size: 24px;
-$header-text-logo-weight: 900;
-$header-text-logo-backgound-color: linear-gradient(rgba(137, 223, 230, 0.6) 0%, rgba(95, 158, 222, 0.8) 100%);
-$header-text-logo-text-shadow: 0 2px 4px rgba(255, 255, 255, 0.42);
+$header-logo-text-margin: 0;
+$header-logo-text-padding: 0;
+$header-logo-text-color: rgba(0, 0, 0, 0.3);
+$header-logo-text-font-familie: $ff-montserrat;
+$header-logo-text-font-size: 24px;
+$header-logo-text-weight: 900;
+$header-logo-text-backgound-color: linear-gradient(rgba(137, 223, 230, 0.6) 0%, rgba(95, 158, 222, 0.8) 100%);
+$header-logo-text-shadow: 0 2px 4px rgba(255, 255, 255, 0.42);
 
 /*hero*/
 $hero-margin-tiny: 4vh;
@@ -122,27 +125,29 @@ $hero-main-title-font-small: 26px;
 $hero-main-title-font-medium: 32px;
 $hero-main-title-font-large: 48px;
 $hero-main-title-font-family: $ff-bebas-neue;
-$hero-about-font-family: $ff-bebas-neue;
 $hero-main-title-color: rgba(0, 0, 0, 0.3);
 $hero-main-title-text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 $hero-main-title-letter-spacing-small: 12px;
 $hero-main-title-letter-spacing-medium: 18px;
 $hero-main-title-letter-spacing-large: 24px;
+$hero-about-font-family: $ff-bebas-neue;
 $hero-about-color: rgba(0, 0, 0, 0.2);
 $hero-about-letter-spacing: 0.1em;
 
-/*code icon*/
+/*css icon*/
 $code-icon-width: 48px;
 $code-icon-height: 36px;
 $code-icon-background-color: $ORANGE;
+$show-more-icon-width: 12px;
 
 /*nav*/
+$nav-link-font-family: $ff-montserrat;
 $nav-link-font-size: 14px;
 $nav-link-font-weight: 600;
 $nav-link-letter-spacing: 3px;
-$nav-link-color: lighten($GRAY, 10%);
-$nav-link-color-hover: rgb(137, 223, 230);
-$nav-link-font-family: $ff-montserrat;
+$nav-link-text-color: lighten($GRAY, 10%);
+$nav-link-text-color-hover: rgb(137, 223, 230);
+$nav-link-unterline-background-color-hover: $nav-link-text-color-hover;
 $nav-link-line-height: 1.8em;
 
 $nav-list-btn-margin: 0 $half-spacing;
@@ -196,10 +201,10 @@ $card-transforme-effect-hover: translate3d(0, -4px, 0);
 $card-img-height: 30%;
 $card-img-min-height: 280px;
 $card-img-background-color: $WHITE;
-$card-descrition-padding: $double-spacing;
 $card-title-font-color: darken($ORANGE, 10%);
 $card-title-font-size: 14px;
 $card-title-font-weight: 600;
+$card-descrition-padding: $double-spacing;
 $card-descrition-padding: $double-spacing;
 $card-descrition-font-size: 18px;
 $card-footer-padding: $basis-spacing;
@@ -207,3 +212,10 @@ $card-footer-font-color: $WHITE;
 $card-footer-font-color-hover: $BLUE;
 $card-footer-font-size: 12px;
 $card-footer-font-weight: 600;
+
+/*hamburger*/
+$nav-icon-height: 23px;
+$nav-icon-width: 28px;
+$nav-icon-margen: $basis-spacing;
+$nav-icon-span-height: 3px;
+$nav-icon-span-color: $ORANGE;

@@ -47,3 +47,8 @@ a {
     text-decoration: none;
     color: $a-default-color;
 }
+
+*:active,
+*:focus {
+    outline: none;
+}

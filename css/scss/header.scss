@@ -14,19 +14,19 @@
         flex-basis: auto;
         padding-left: $double-spacing;
 
-        & .text-logo {
+        & .logo-text {
             display: block;
-            margin: $header-text-logo-margin;
-            padding: $header-text-logo-padding;
-            background-image: $header-text-logo-backgound-color;
-            font-family: $header-text-logo-font-familie;
-            font-size: $header-text-logo-font-size;
-            font-weight: $header-text-logo-weight;
-            color: $header-text-logo-weight-color;
+            margin: $header-logo-text-margin;
+            padding: $header-logo-text-padding;
+            background-image: $header-logo-text-backgound-color;
+            font-family: $header-logo-text-font-familie;
+            font-size: $header-logo-text-font-size;
+            font-weight: $header-logo-text-weight;
+            color: $header-logo-text-color;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             -webkit-background-clip: text;
-            text-shadow: $header-text-logo-text-shadow;
+            text-shadow: $header-logo-text-shadow;
             text-transform: uppercase;
             animation: fadeInUp 0.8s ease;
             transition: all 0.6s ease;

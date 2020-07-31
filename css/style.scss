@@ -18,7 +18,7 @@
 @import "scss/section";
 @import "scss/parallax";
 @import "scss/hero";
-@import "scss/code-icon";
+@import "scss/css-icon";
 /*------------------------------------*\
 	$elements
 \*------------------------------------*/
@@ -36,3 +36,8 @@
 	$map interactive
 \*------------------------------------*/
 @import "scss/map-interactive";
+
+/*------------------------------------*\
+	$post animation
+\*------------------------------------*/
+@import "scss/svg-animated";

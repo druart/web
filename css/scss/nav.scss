@@ -15,6 +15,11 @@
     margin-top: auto;
     padding: 0;
     animation: zoomIn 0.6s ease;
+
+    &--block {
+        display: block !important;
+        animation: none;
+    }
 }
 
 .nh-list__item {
@@ -44,7 +49,7 @@
         margin: 0;
         margin-left: auto;
         margin-right: auto;
-        color: $nav-link-color;
+        color: $nav-link-text-color;
         font-size: $nav-link-font-size;
         font-weight: $nav-link-font-weight;
         font-family: $nav-link-font-family;
@@ -66,7 +71,7 @@
     }
 
     & a:hover {
-        color: $nav-link-color-hover;
+        color: $nav-link-text-color-hover;
 
         &::before,
         &::after {
@@ -76,12 +81,12 @@
 
         &::before {
             height: 2px;
-            background-color: $nav-link-color-hover;
+            background-color: $nav-link-unterline-background-color-hover;
         }
 
         &::after {
             height: 1px;
-            background-color: lighten($nav-link-color-hover, 10%);
+            background-color: lighten($nav-link-unterline-background-color-hover, 10%);
         }
     }
 }

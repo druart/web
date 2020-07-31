@@ -7,6 +7,7 @@
     flex-wrap: wrap;
 
     &__item {
+        position: relative;
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: calc(100% / 3);
