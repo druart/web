@@ -23,6 +23,63 @@
 /*flex*/
 /*card*/
 /*hamburger*/
+/**
+ *font-face
+ */
+@font-face {
+  font-family: "gentium";
+  src: url("../Fonts/gentiumbasic-bold.ttf") format("embedded-opentype"), url("../Fonts/gentiumbasic-bold.ttf") format("woff2"), url("../Fonts/gentiumbasic-bold.ttf") format("woff"), url("../Fonts/gentiumbasic-bold.ttf") format("truetype"), url("../Fonts/gentiumbasic-bold.ttf") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "bebas";
+  src: url("../Fonts/bebasneue-regular.ttf") format("embedded-opentype"), url("../Fonts/bebasneue-regular.ttf") format("woff2"), url("../Fonts/bebasneue-regular.ttf") format("woff"), url("../Fonts/bebasneue-regular.ttf") format("truetype"), url("../Fonts/bebasneue-regular.ttf") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "montserrat extralight";
+  src: url("../Fonts/montserrat-extralight.ttf") format("embedded-opentype"), url("../Fonts/montserrat-extralight.ttf") format("woff2"), url("../Fonts/montserrat-extralight.ttf") format("woff"), url("../Fonts/montserrat-extralight.ttf") format("truetype"), url("../Fonts/montserrat-extralight.ttf") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "montserrat light";
+  src: url("../Fonts/montserrat-light.ttf") format("embedded-opentype"), url("../Fonts/montserrat-light.ttf") format("woff2"), url("../Fonts/montserrat-light.ttf") format("woff"), url("../Fonts/montserrat-light.ttf") format("truetype"), url("../Fonts/montserrat-light.ttf") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../Fonts/montserrat-regular.ttf") format("embedded-opentype"), url("../Fonts/montserrat-regular.ttf") format("woff2"), url("../Fonts/montserrat-regular.ttf") format("woff"), url("../Fonts/montserrat-regular.ttf") format("truetype"), url("../Fonts/montserrat-regular.ttf") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "montserrat semibold";
+  src: url("../Fonts/montserrat-semibold.ttf") format("embedded-opentype"), url("../Fonts/montserrat-semibold.ttf") format("woff2"), url("../Fonts/montserrat-semibold.ttf") format("woff"), url("../Fonts/montserrat-semibold.ttf") format("truetype"), url("../Fonts/montserrat-semibold.ttf") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "montserrat bold";
+  src: url("../Fonts/montserrat-bold.ttf") format("embedded-opentype"), url("../Fonts/montserrat-bold.ttf") format("woff2"), url("../Fonts/montserrat-bold.ttf") format("woff"), url("../Fonts/montserrat-bold.ttf") format("truetype"), url("../Fonts/montserrat-bold.ttf") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "ptsans narrow";
+  src: url("../Fonts/ptsansnarrow.ttf") format("embedded-opentype"), url("../Fonts/ptsansnarrow.ttf") format("woff2"), url("../Fonts/ptsansnarrow.ttf") format("woff"), url("../Fonts/ptsansnarrow.ttf") format("truetype"), url("../Fonts/ptsansnarrow.ttf") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "ptsans narrow bold";
+  src: url("../Fonts/ptsansnarrow-bold.ttf") format("embedded-opentype"), url("../Fonts/ptsansnarrow-bold.ttf") format("woff2"), url("../Fonts/ptsansnarrow-bold.ttf") format("woff"), url("../Fonts/ptsansnarrow-bold.ttf") format("truetype"), url("../Fonts/ptsansnarrow-bold.ttf") format("svg");
+  /* Legacy iOS */
+}
+
 /*------------------------------------*\
 	$basis
 \*------------------------------------*/
@@ -62,7 +119,7 @@ body.overflow-stop {
 h1, h2, h3, h4, p, ul, li {
   margin: 0;
   padding: 0;
-  color: #aaa;
+  color: #b9bbbd;
 }
 
 ul, ol {
@@ -100,6 +157,10 @@ a {
 /**
  *padding
  */
+.npadding {
+  padding: 0 !important;
+}
+
 .padding-small {
   padding: 12px !important;
 }
@@ -1764,7 +1825,7 @@ animation-fill-mode: configures what values are applied by the animation before 
 
 .js-card-builder,
 .modal {
-  color: #aaa;
+  color: #b9bbbd;
 }
 
 .modal {
@@ -1836,7 +1897,7 @@ animation-fill-mode: configures what values are applied by the animation before 
 .modal__title {
   margin-bottom: 24px;
   color: #5f9ede;
-  font-family: "Gentium Basic", sans-serif;
+  font-family: "ptsans narrow bold", sans-serif;
   font-size: 32px;
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
 }
@@ -1848,7 +1909,7 @@ animation-fill-mode: configures what values are applied by the animation before 
 }
 
 .modal__description {
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 20px;
   margin: 12px;
 }
@@ -1889,9 +1950,8 @@ animation-fill-mode: configures what values are applied by the animation before 
   margin: 0;
   padding: 0;
   background-image: linear-gradient(rgba(137, 223, 230, 0.6) 0%, rgba(95, 158, 222, 0.8) 100%);
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserrat bold", sans-serif;
   font-size: 24px;
-  font-weight: 900;
   color: rgba(0, 0, 0, 0.3);
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1909,7 +1969,7 @@ animation-fill-mode: configures what values are applied by the animation before 
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserrat", sans-serif;
   background: #fbfbfb;
   /**
  *hero
@@ -1927,7 +1987,7 @@ animation-fill-mode: configures what values are applied by the animation before 
   align-items: center;
   height: 100vh;
   padding-top: 12px;
-  background: linear-gradient(#f1f1f1 96%, #fbfbfb 96%) !important;
+  background: linear-gradient(#f1f1f1 96%, #fbfbfb 100%) !important;
   transition: padding 0.6s ease;
 }
 
@@ -1935,15 +1995,6 @@ animation-fill-mode: configures what values are applied by the animation before 
   .section--hero .hero--grid {
     grid-template-rows: 1fr;
   }
-}
-
-.section--hero-small {
-  display: block;
-  height: 320px;
-  background-image: url("../images/png/airport.png");
-  background-position: top left;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .section:nth-of-type(4), .section:nth-of-type(7) {
@@ -1966,9 +2017,8 @@ animation-fill-mode: configures what values are applied by the animation before 
   display: block;
   width: 100%;
   padding: 12px;
-  color: #aaa;
+  color: #b9bbbd;
   font-size: 16px;
-  font-weight: 600;
   text-align: center;
 }
 
@@ -2020,7 +2070,7 @@ animation-fill-mode: configures what values are applied by the animation before 
   margin-left: 24px;
   margin-right: 12px;
   padding-bottom: 12px;
-  font-family: "Gentium Basic", sans-serif;
+  font-family: "ptsans narrow bold", sans-serif;
   font-size: 36px;
   color: #5f9ede;
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
@@ -2038,7 +2088,7 @@ animation-fill-mode: configures what values are applied by the animation before 
 
 .section__text {
   font-size: 22px;
-  color: #aaa;
+  color: #b9bbbd;
   margin: 12px;
   margin-top: 24px;
 }
@@ -2095,30 +2145,29 @@ animation-fill-mode: configures what values are applied by the animation before 
 }
 
 .section-parallax--first {
-  background-image: url("../images/tiny_pincels_vertical.png");
+  background-image: url("../images/planets-01.png");
   background-size: cover;
 }
 
 @media screen and (min-width: 768px) {
   .section-parallax--first {
-    background-image: url("../images/tiny_pincels_horizontal.png");
+    background-image: url("../images/planets-02.png");
   }
 }
 
 .section-parallax__quote-text {
   position: absolute;
-  top: 50%;
+  bottom: 5%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: calc(100% - 12px - 12px * 2);
   margin: 0;
   margin-left: 12px;
   padding: 12px;
   color: #ececec;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserrat semibold", sans-serif;
   font-size: 18px;
-  font-weight: 600;
   line-height: 1.25;
   letter-spacing: 2px;
 }
@@ -2207,9 +2256,9 @@ animation-fill-mode: configures what values are applied by the animation before 
   display: block;
   width: 100%;
   margin: 0;
+  font-family: "bebas", sans-serif;
+  font-weight: 400;
   font-size: 26px;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: normal;
   color: rgba(0, 0, 0, 0.3);
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
   text-align: center;
@@ -2249,11 +2298,24 @@ animation-fill-mode: configures what values are applied by the animation before 
 
 .hero__about {
   font-size: 1.1em;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "bebas", sans-serif;
   color: rgba(0, 0, 0, 0.2);
   align-self: flex-end;
   letter-spacing: 0.1em;
   animation: bounceInLeft 1.2s ease;
+}
+
+.hero-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url("../images/svg/moon.svg");
+  max-width: 680px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 /**
@@ -2455,7 +2517,7 @@ animation-fill-mode: configures what values are applied by the animation before 
   bottom: -100%;
   width: 3.8em;
   height: 3.8em;
-  background-color: #aaa;
+  background-color: #b9bbbd;
   border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
@@ -2544,14 +2606,14 @@ animation-fill-mode: configures what values are applied by the animation before 
   margin: 0 6px;
   padding: 12px 24px;
   background-color: transparent;
-  border: 2px solid #aaa;
+  border: 2px solid #b9bbbd;
   border-radius: 4px;
-  color: #aaa;
+  color: #b9bbbd;
+  font-family: "montserrat semibold", sans-serif;
   font-size: 12px;
-  font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  transition: all 0.8s ease;
+  transition: all 0.6s linear;
   cursor: pointer;
 }
 
@@ -2560,7 +2622,14 @@ animation-fill-mode: configures what values are applied by the animation before 
 }
 
 .nav-list__btn:hover {
-  background-color: #aaa;
+  background-color: #5f9ede;
+  border: 2px solid #5f9ede;
+  color: #fbfbfb;
+}
+
+.nav-list__btn--close:hover {
+  background-color: #e44034;
+  border: 2px solid #e44034;
   color: #fbfbfb;
 }
 
@@ -2578,13 +2647,13 @@ animation-fill-mode: configures what values are applied by the animation before 
   flex-shrink: 0;
   flex-basis: auto;
   padding: 12px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #3a4c55;
+  font-family: "montserrat semibold", sans-serif;
   font-size: 12px;
-  font-weight: 600;
   color: #fbfbfb;
   text-transform: uppercase;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .underline__btn::before, .underline__btn::after {
@@ -2597,7 +2666,7 @@ animation-fill-mode: configures what values are applied by the animation before 
 }
 
 .underline__btn:hover {
-  color: #5f9ede;
+  color: #fbfbfb;
 }
 
 .underline__btn:hover::before, .underline__btn:hover::after {
@@ -2607,12 +2676,12 @@ animation-fill-mode: configures what values are applied by the animation before 
 
 .underline__btn:hover::before {
   height: 2px;
-  background-color: #5f9ede;
+  background-color: #fbfbfb;
 }
 
 .underline__btn:hover::after {
   height: 1px;
-  background-color: #89b8e7;
+  background-color: white;
 }
 
 /**
@@ -2672,10 +2741,9 @@ animation-fill-mode: configures what values are applied by the animation before 
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-  color: #c4c3c3;
+  color: #d3d5d6;
   font-size: 14px;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserrat semibold", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -2786,9 +2854,9 @@ animation-fill-mode: configures what values are applied by the animation before 
 
 .list__title {
   padding-bottom: 24px;
+  font-family: "montserrat extralight", sans-serif;
   font-size: 24px;
-  font-weight: 400;
-  color: #9d9d9d;
+  color: #acaeb1;
 }
 
 .list__title.global-flex__item {
@@ -2801,9 +2869,9 @@ animation-fill-mode: configures what values are applied by the animation before 
 
 .list__subtitle {
   padding-bottom: 12px;
+  font-family: "montserrat", sans-serif;
   font-size: 14px;
-  font-weight: 600;
-  color: #919090;
+  color: #9fa2a4;
   text-transform: uppercase;
 }
 
@@ -2821,8 +2889,8 @@ animation-fill-mode: configures what values are applied by the animation before 
 }
 
 .list__text--bold {
-  font-weight: 600;
-  color: #a2a2a2;
+  font-family: "montserrat semibold", sans-serif;
+  color: #b1b3b6;
 }
 
 /**
@@ -2857,30 +2925,31 @@ animation-fill-mode: configures what values are applied by the animation before 
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserrat", sans-serif;
   text-decoration: none;
   overflow: hidden;
 }
 
 .card--border {
-  background-color: #fbfbfb;
-  border: 1px solid #f3aa23;
+  background: #fbfbfb;
+  border: 1px solid #f1f1f1;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
 }
 
 .card--border:hover {
-  background-color: #f6bd53;
+  background: linear-gradient(#607d8b, #4f6773);
   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
   transform: translate3d(0, -4px, 0);
 }
 
-.card--border:hover .card__title {
-  color: white;
+.card--border:hover .card__title,
+.card--border:hover .card__description {
+  color: #fbfbfb;
 }
 
-.card--border:hover .card__description {
-  color: #717171;
+.card--not-transform:hover {
+  transform: none;
 }
 
 .card__img {
@@ -2903,7 +2972,7 @@ animation-fill-mode: configures what values are applied by the animation before 
 .card__title {
   padding: 24px;
   font-size: 14px;
-  font-weight: 600;
+  font-family: "montserrat semibold", sans-serif;
   color: #d7900c;
   text-transform: uppercase;
 }
@@ -3536,7 +3605,7 @@ version: 1.2.0
   margin: 0 auto;
   margin-top: 24px;
   padding: 24px;
-  background-color: #f1f1f1;
+  background-color: white;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -3553,7 +3622,7 @@ version: 1.2.0
   flex-basis: 30%;
   min-width: 280px;
   background-color: #fbfbfb;
-  color: #aaa;
+  color: #b9bbbd;
 }
 
 .menu-bar__header {
@@ -3605,7 +3674,7 @@ version: 1.2.0
 */
 .btn {
   width: 100%;
-  color: #aaa;
+  color: #b9bbbd;
   font-size: 16px;
   font-weight: 600;
   line-height: 48px;
@@ -3640,7 +3709,7 @@ version: 1.2.0
 
 .btn--sub:hover {
   color: #fbfbfb;
-  background-color: #adadad !important;
+  background-color: #bcbebf !important;
 }
 
 .btn--subnav {
@@ -3691,13 +3760,13 @@ version: 1.2.0
 }
 
 .btn__icon:hover, .btn__text:hover {
-  background-color: #777777;
+  background-color: #85888c;
   color: #fbfbfb;
   cursor: pointer;
 }
 
 .btn.keep-highlighted {
-  background-color: #f7f6f6;
+  background-color: white;
 }
 
 .map {
@@ -3744,7 +3813,7 @@ version: 1.2.0
   max-height: 25vh;
   padding: 12px 24px;
   vertical-align: top;
-  color: #aaa;
+  color: #b9bbbd;
   overflow: auto;
 }
 
@@ -3756,7 +3825,7 @@ version: 1.2.0
   margin-bottom: 24px;
   padding-left: 12px;
   color: #f3aa23;
-  font-family: "Gentium Basic", sans-serif;
+  font-family: "gentium", sans-serif;
   font-size: 24px;
   border-bottom: 1px solid #f3aa23;
 }
@@ -3767,7 +3836,7 @@ version: 1.2.0
 }
 
 .map__info .info-text {
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-weight: lighter;
   font-size: 18px;
 }
@@ -3885,6 +3954,7 @@ version: 1.2.0
   position: absolute;
   bottom: 12px;
   right: 0;
+  opacity: 0;
   transition: bottom 0.4s ease-out;
   z-index: 0;
 }
@@ -3894,7 +3964,8 @@ version: 1.2.0
     display: block;
   }
   .card-list__item:hover .wrap-animation {
-    bottom: calc(100% - 12px + 4px);
+    bottom: 100%;
+    opacity: 1;
   }
   .card-list__item:hover .wrap-animation .postsmall,
   .card-list__item:hover .wrap-animation .postbig {

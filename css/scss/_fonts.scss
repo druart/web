@@ -1,0 +1,81 @@
+/**
+ *font-face
+ */
+@font-face {
+    font-family: "gentium";
+    src: url('../Fonts/gentiumbasic-bold.ttf') format('embedded-opentype'), /* Internet Explorer */
+        url('../Fonts/gentiumbasic-bold.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/gentiumbasic-bold.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/gentiumbasic-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/gentiumbasic-bold.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "bebas";
+    src: url('../Fonts/bebasneue-regular.ttf') format('embedded-opentype'), /* Internet Explorer */
+        url('../Fonts/bebasneue-regular.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/bebasneue-regular.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/bebasneue-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/bebasneue-regular.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "montserrat extralight";
+    src: url('../Fonts/montserrat-extralight.ttf') format('embedded-opentype'), /* Internet Explorer */
+        url('../Fonts/montserrat-extralight.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/montserrat-extralight.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/montserrat-extralight.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/montserrat-extralight.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "montserrat light";
+    src: url('../Fonts/montserrat-light.ttf') format('embedded-opentype'), /* Internet Explorer */
+        url('../Fonts/montserrat-light.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/montserrat-light.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/montserrat-light.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/montserrat-light.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url('../Fonts/montserrat-regular.ttf') format('embedded-opentype'), /* Internet Explorer */
+        url('../Fonts/montserrat-regular.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/montserrat-regular.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/montserrat-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/montserrat-regular.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "montserrat semibold";
+    src: url('../Fonts/montserrat-semibold.ttf') format('embedded-opentype'), /* Internet Explorer */
+        url('../Fonts/montserrat-semibold.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/montserrat-semibold.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/montserrat-semibold.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/montserrat-semibold.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "montserrat bold";
+    src: url('../Fonts/montserrat-bold.ttf') format('embedded-opentype'), /* Internet Explorer */
+        url('../Fonts/montserrat-bold.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/montserrat-bold.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/montserrat-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/montserrat-bold.ttf') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: "ptsans narrow";
+    src: url('../Fonts/ptsansnarrow.ttf') format('embedded-opentype'), /* Internet Explorer */
+        url('../Fonts/ptsansnarrow.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/ptsansnarrow.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/ptsansnarrow.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/ptsansnarrow.ttf') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: "ptsans narrow bold";
+    src: url('../Fonts/ptsansnarrow-bold.ttf') format('embedded-opentype'), /* Internet Explorer */
+        url('../Fonts/ptsansnarrow-bold.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/ptsansnarrow-bold.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/ptsansnarrow-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/ptsansnarrow-bold.ttf') format('svg'); /* Legacy iOS */
+}

@@ -17,6 +17,7 @@
         "grunt-shell": "^2.1.0",
         "load-grunt-config": "^3.0.1",
         "pixrem": "^4.0.1",
-        "websocket-extensions": "^0.1.4"
+        "websocket-extensions": "^0.1.4",
+        "http-proxy": "^1.18.1"
     }
 }

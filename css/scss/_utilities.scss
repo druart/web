@@ -1,0 +1,60 @@
+/**
+ *margin
+ */
+.margin-top-small {
+    margin-top: $basis-spacing !important;
+}
+
+.margin-top-medium {
+    margin-top: $double-spacing !important;
+}
+
+.margin-left-right-small {
+    margin-left: $basis-spacing !important;
+    margin-right: $basis-spacing !important;
+}
+
+/**
+ *padding
+ */
+.npadding {
+    padding: 0 !important;
+}
+
+.padding-small {
+    padding: $basis-spacing !important;
+}
+
+/**
+ *text align
+ */
+.text-align-left {
+    text-align: left !important;
+}
+
+.text-align-right {
+    text-align: right !important;
+}
+
+.text-align-center {
+    text-align: center !important;
+}
+
+/**
+ *form
+ */
+.circular-form {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/**
+ *flex
+ */
+ .fc-center {
+     justify-content: center !important;
+ }
+
+.fd-column {
+    flex-direction: column !important;
+}

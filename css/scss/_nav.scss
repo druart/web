@@ -1,0 +1,147 @@
+/**
+ *nav
+ */
+ @mixin grid($colStart, $colEnd, $rowStart, $rowEnd) {
+	grid-column-start: $colStart;
+	grid-column-end: $colEnd;
+	grid-row-start: $rowStart;
+	grid-row-end: $rowEnd;
+}
+
+.nh-list {
+    display: grid;
+    width: auto;
+    margin: 0;
+    margin-top: auto;
+    padding: 0;
+    animation: zoomIn 0.6s ease;
+
+    &--block {
+        display: block !important;
+        animation: none;
+    }
+}
+
+.nh-list__item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &--one {
+        @include grid(1, 2, 1, 2);
+    }
+
+    &--two {
+        @include grid(1, 2, 2, 3);
+    }
+
+    &--three {
+        @include grid(1, 2, 3, 4);
+    }
+
+    &--four {
+        @include grid(1, 2, 4, 5);
+    }
+
+    & a {
+        position: relative;
+        display: block;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        color: $nav-link-text-color;
+        font-size: $nav-link-font-size;
+        font-family: $nav-link-font-family;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: $nav-link-letter-spacing;
+        line-height: $nav-link-line-height;
+        transition: color 0.3s ease-in-out;
+    }
+
+    & a::before,
+    & a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        transition: width 0.4s ease-in-out;
+    }
+
+    & a:hover {
+        color: $nav-link-text-color-hover;
+
+        &::before,
+        &::after {
+            bottom: -2px;
+            width: 100%;
+        }
+
+        &::before {
+            height: 2px;
+            background-color: $nav-link-unterline-background-color-hover;
+        }
+
+        &::after {
+            height: 1px;
+            background-color: lighten($nav-link-unterline-background-color-hover, 10%);
+        }
+    }
+}
+
+
+@media screen and (min-width: 721px) and (max-width: 799px) {
+    .nh-list {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1.4em;
+    }
+
+    .nh-list__item {
+    
+        &--one {
+            @include grid(1, 2, 1, 2);
+        }
+        
+        &--two {
+            @include grid(2, 3, 1, 2);
+        }
+        
+        &--three {
+            @include grid(1, 2, 2, 3);
+        }
+        
+        &--four {
+            @include grid(2, 3, 2, 3);
+        }
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .nh-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 1.4em;
+    }
+
+    .nh-list__item {
+    
+        &--one {
+            @include grid(1, 2, 1, 2);
+        }
+        
+        &--two {
+            @include grid(2, 3, 1, 2);
+        }
+        
+        &--three {
+            @include grid(3, 4, 1, 2);
+        }
+        
+        &--four {
+            @include grid(4, 5, 1, 2);
+        }
+    }
+}

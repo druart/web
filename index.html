@@ -8,7 +8,7 @@
     <title>druArt</title>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="227x227" href="favicon/avicon.png">
+    <link rel="icon" type="image/png" sizes="227x227" href="favicon/favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
@@ -17,10 +17,6 @@
     <meta name="theme-color" content="#fff">
     <!-- style -->
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body class="overflow-stop">
@@ -132,18 +128,8 @@
                 C112.961,27.85,123.23,38.119,123.23,50.788z"/>
             <path fill="#FFFFFF" d="M100.291,63.818c-7.343,0-13.297-5.952-13.297-13.296c0-7.344,5.953-13.295,13.297-13.295
                 c7.342,0,13.297,5.952,13.297,13.295C113.588,57.865,107.633,63.818,100.291,63.818z"/>
-<<<<<<< HEAD
-        </g>
-    </symbol>
-=======
-<<<<<<< HEAD
         </symbol>
     </g>
-=======
-        </g>
-    </symbol>
->>>>>>> 9e20617... adding to card animated svg
->>>>>>> f1aa0e3... adding svg animeted plane
 </svg>
 <!-- modal -->
 <div class="overlay-active  active">
@@ -180,7 +166,7 @@
             <ul class="nav-list">
                 <li class="nav-list__btn  [ js-prev ]">Prev</button>
                 <li class="nav-list__btn  [ js-next ]">Next</button>
-                <li class="nav-list__btn  [ js-close ]">Close</li>
+                <li class="nav-list__btn  nav-list__btn--close [ js-close ]">Close</li>
             </ul>
         </div>
     </div>
@@ -214,6 +200,7 @@
                 </ul>
             </nav>
         </div>
+        <div class="hero-image"></div>
     </section>
 <!-- section parallax -->
     <section class="section-parallax  section-parallax--first">
@@ -394,9 +381,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="global-flex  [ fc-center ]">
+            <div class="global-flex  [ fc-center ]  [ section__element--hidden ]">
                 <ul class="nh-list  nh-list--block">
-                    <li class="nh-list__item"><a href="svg-animated/animated.html">see more about me</a></li>
+                    <li class="nh-list__item"><a href="#resume">see more about me</a></li>
                 </ul>
             </div>
         </div>
@@ -406,7 +393,7 @@
         <div class="section__body">
             <h2 class="section__title  [ section__element--hidden ]">Connect with me<br>today.</h2>
             <div class="card-list">
-                <div class="card-list__item  [ section__element--hidden ]">
+                <div class="card-list__item  [ section__element--hidden  npadding ]">
                     <div class="wrap-animation">
                         <svg class="svg-scalable" version="1.1" id="post_icon_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
                             <use class="postsmall" xlink:href="#postsmall" x="0" y="0"/>
@@ -417,7 +404,7 @@
                             <use class="plant" xlink:href="#plant" x="0" y="0"/>
                         </svg>
                     </div>
-                    <a href="mailto:druart.adm@gmail.com" class="card  card--border">
+                    <a href="mailto:druart.adm@gmail.com" class="card  card--border  card--not-transform">
                         <div class="card__content">
                             <h2 class="card__title">Say Hello</h2>
                             <p class="card__description">Feel free to contact me if you have any question or comments.</p>
@@ -425,14 +412,14 @@
                         </div>
                     </a>
                 </div>
-                <div class="card-list__item  [ section__element--hidden ]">
+                <div class="card-list__item  [ section__element--hidden  npadding ]">
                     <div class="wrap-animation">
                         <svg class="svg-scalable" version="1.1" id="post_icon_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
                             <use class="map" xlink:href="#map" x="0" y="0"/>
                             <use class="location" xlink:href="#location" x="0" y="0"/>
                         </svg>
                     </div>
-                    <a href="https://www.google.com/maps/place/Peterswerder,+28205+Bremen/@53.06592,8.8349236,15z/data=!3m1!4b1!4m13!1m7!3m6!1s0x47b128100ceee335:0xc2e8885cf937df51!2sBremen!3b1!8m2!3d53.0792962!4d8.8016936!3m4!1s0x47b127f6e977fb1b:0x9378c94e8e1cd756!8m2!3d53.0660278!4d8.8442516" target="_blank" class="card  card--border">
+                    <a href="https://www.google.com/maps/place/Peterswerder,+28205+Bremen/@53.06592,8.8349236,15z/data=!3m1!4b1!4m13!1m7!3m6!1s0x47b128100ceee335:0xc2e8885cf937df51!2sBremen!3b1!8m2!3d53.0792962!4d8.8016936!3m4!1s0x47b127f6e977fb1b:0x9378c94e8e1cd756!8m2!3d53.0660278!4d8.8442516" target="_blank" class="card  card--border  card--not-transform">
                         <div class="card__content">
                             <h2 class="card__title">Location</h2>
                             <p class="card__description">Bremen, Germany</p>
