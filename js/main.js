@@ -174,7 +174,7 @@ $(document).ready(function() {
     var dataModal = [
         {
             dataTitle: "Lorem ipsum",
-            dataContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aut rem quod unde deserunt id provident asperiores tempore, modi totam, vel placeat tempora dolor voluptatem! Ipsa nemo, modi vero excepturi!",
+            dataContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aut rem quod unde deserunt id provident asperiores tempore, modi totam, vel placeat tempora dolor voluptatem! Ipsa nemo, modi vero excepturi!<br><a href='https://www.bund.net/fileadmin/user_upload_bund/publikationen/meere/meere_eutrophierung_flyer.pdf' target='_blank'>download the flyer</a>",
             dataImg: "background-image: url(images/png/eutrophierung_BUND_2016-01.png);",
             dataThumb: "background-image: url(images/png/eutrophierung_mascots_BUND_2016-02.png);"
         },
