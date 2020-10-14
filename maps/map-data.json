@@ -1,0 +1,19 @@
+{
+    "infoMap": [
+        {
+            "id": "ecuador",
+            "title": "Ecuador",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi quis quo, magni quia laboriosam." 
+        },
+        {
+            "id": "galapagos",
+            "title": "Galápagos Region",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi quis quo, magni quia laboriosam." 
+        },
+        {
+            "id": "coastal",
+            "title": "Coastal Lowlands Region",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi quis quo, magni quia laboriosam." 
+        }
+    ]
+}

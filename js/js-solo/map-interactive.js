@@ -115,7 +115,7 @@ $(document).ready(function() {
 
     //map menu hamburger
     $('.js-toggle').on('click', function(e) {
-		e.preventDefault();
+        e.preventDefault();
         $(this).toggleClass('is-open');
         $('.menu-bar--slide').toggleClass('is-show');
         $('.show-more').removeClass('is-open');
