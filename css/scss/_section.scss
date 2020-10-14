@@ -26,6 +26,15 @@
         }
     }
 
+    &--hero-small {
+        display: block;
+        height: $section-hero-small-height;
+        background-image: url("../images/png/airport.png");
+        background-position: top left;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
 /**
  *background color
  */

@@ -1997,6 +1997,15 @@ animation-fill-mode: configures what values are applied by the animation before 
   }
 }
 
+.section--hero-small {
+  display: block;
+  height: 320px;
+  background-image: url("../images/png/airport.png");
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .section:nth-of-type(4), .section:nth-of-type(7) {
   background: #eeeeee;
 }
@@ -4093,5 +4102,88 @@ version: 1.2.0
   100% {
     transform: rotate(0deg);
     transform-origin: 99px 94px;
+  }
+}
+
+.plane {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.plane.is-flying .propelle {
+  animation: propelle 0.01s ease infinite;
+}
+
+.plane.is-flying .scarf {
+  animation: scarf 0.8s ease infinite;
+}
+
+.plane.is-flying .strips {
+  animation: strips 0.4s ease infinite;
+}
+
+/*
+ * animate
+ */
+@keyframes propelle {
+  0% {
+    opacity: 0;
+    transform-origin: 187px 91px;
+  }
+  50% {
+    opacity: 1;
+    transform: scale-y(0.8);
+    transform-origin: 187px 91px;
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 187px 91px;
+  }
+}
+
+@keyframes scarf {
+  0%,
+  35% {
+    transform: rotate(4deg);
+    transform-origin: 90px 87px;
+  }
+  25% {
+    transform: rotate(-8deg);
+    transform-origin: 90px 87px;
+  }
+  50% {
+    transform: rotate(10deg);
+    transform-origin: 90px 87px;
+  }
+  75% {
+    transform: rotate(-12deg);
+    transform-origin: 90px 87px;
+  }
+  100% {
+    transform: rotate(4deg);
+    transform-origin: 90px 87px;
+  }
+}
+
+@keyframes strips {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 85px 75px;
+  }
+  25% {
+    transform: rotate(15deg);
+    transform-origin: 85px 75px;
+  }
+  50% {
+    transform: rotate(7deg);
+    transform-origin: 85px 75px;
+  }
+  75% {
+    transform: rotate(18deg);
+    transform-origin: 85px 75px;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 85px 75px;
   }
 }
